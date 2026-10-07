@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/tools/index.html</loc></url>
+  <url><loc>https://example.com/guides/index.html</loc></url>
+  <url><loc>https://example.com/about.html</loc></url>
+  <url><loc>https://example.com/contact.html</loc></url>
+  <url><loc>https://example.com/tools/attendance.html</loc></url>
+  <url><loc>https://example.com/tools/gpa-goal.html</loc></url>
+  <url><loc>https://example.com/tools/final-exam.html</loc></url>
+  <url><loc>https://example.com/tools/semester-gpa.html</loc></url>
+  <url><loc>https://example.com/tools/cgpa.html</loc></url>
+  <url><loc>https://example.com/tools/scientific.html</loc></url>
+  <url><loc>https://example.com/tools/percentage.html</loc></url>
+  <url><loc>https://example.com/tools/grade.html</loc></url>
+  <url><loc>https://example.com/tools/date-diff.html</loc></url>
+  <url><loc>https://example.com/tools/unit-converter.html</loc></url>
+  <url><loc>https://example.com/tools/word-counter.html</loc></url>
+  <url><loc>https://example.com/tools/study-timer.html</loc></url>
+  <url><loc>https://example.com/guides/attendance-percentage.html</loc></url>
+  <url><loc>https://example.com/guides/calculate-gpa.html</loc></url>
+  <url><loc>https://example.com/guides/final-exam-marks.html</loc></url>
+  <url><loc>https://example.com/guides/calculate-cgpa.html</loc></url>
+</urlset>

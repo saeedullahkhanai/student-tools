@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Percentage Calculator - Percent of, Share &amp; Change</title>
+<meta name="description" content="Calculate a percentage of a number, what percent one number is of another, and percentage increase or decrease with three simple calculators.">
+<link rel="canonical" href="https://example.com/tools/percentage.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Student Tools">
+<meta property="og:title" content="Percentage Calculator - Percent of, Share &amp; Change">
+<meta property="og:description" content="Calculate a percentage of a number, what percent one number is of another, and percentage increase or decrease with three simple calculators.">
+<meta property="og:url" content="https://example.com/tools/percentage.html">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<script>
+  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+</script>
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Percentage Calculator","url":"https://example.com/tools/percentage.html","description":"Calculate a percentage of a number, what percent one number is of another, and percentage increase or decrease with three simple calculators.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://example.com/tools/index.html"},{"@type":"ListItem","position":3,"name":"Percentage Calculator","item":"https://example.com/tools/percentage.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
+    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+    <div class="actions">
+      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Percentage Calculator</li></ol></nav>
+  <header class="tool-head"><h1>Percentage Calculator</h1><p>Three quick percentage calculators: a percentage of a number, a share of a total, and percentage change.</p></header>
+  <h2 class="sec">What is X% of Y?</h2><section class="calc" aria-label="Percent of a number"><form class="card panel" data-calc="pct-of" novalidate><div class="field"><label for="percent">Percentage (%)</label><input id="percent" name="percent" type="number" inputmode="decimal" step="any" placeholder="20" data-label="the percentage"  aria-describedby="percent-err"><p class="err" id="percent-err" role="alert"></p></div><div class="field"><label for="of">Of Number</label><input id="of" name="of" type="number" inputmode="decimal" step="any" placeholder="150" data-label="the number"  aria-describedby="of-err"><p class="err" id="of-err" role="alert"></p></div><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section><h2 class="sec">X is what percent of Y?</h2><section class="calc" aria-label="Part as a percentage"><form class="card panel" data-calc="pct-is" novalidate><div class="field"><label for="part">Part</label><input id="part" name="part" type="number" inputmode="decimal" step="any" placeholder="45" data-label="the part"  aria-describedby="part-err"><p class="err" id="part-err" role="alert"></p></div><div class="field"><label for="whole">Whole</label><input id="whole" name="whole" type="number" inputmode="decimal" step="any" placeholder="60" data-label="the whole"  aria-describedby="whole-err"><p class="err" id="whole-err" role="alert"></p></div><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section><h2 class="sec">Percentage change</h2><section class="calc" aria-label="Percentage change"><form class="card panel" data-calc="pct-change" novalidate><div class="field"><label for="from">Old Value</label><input id="from" name="from" type="number" inputmode="decimal" step="any" placeholder="80" data-label="the old value"  aria-describedby="from-err"><p class="err" id="from-err" role="alert"></p></div><div class="field"><label for="to">New Value</label><input id="to" name="to" type="number" inputmode="decimal" step="any" placeholder="100" data-label="the new value"  aria-describedby="to-err"><p class="err" id="to-err" role="alert"></p></div><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section>
+  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+  <article class="content">
+    <h2>How it works</h2><p>Pick the calculator that matches your question, enter two numbers and press Calculate. Marks, discounts and growth all use the same three ideas.</p>
+    <h2>Formula</h2><div class="formula">X% of Y = X ÷ 100 × Y</div><div class="formula">Part ÷ Whole × 100 = Percentage</div><div class="formula">Change % = (New − Old) ÷ Old × 100</div>
+    <h2>Example</h2><p>20% of 150 = <strong>30</strong>. 45 out of 60 = <strong>75%</strong>. From 80 to 100 is a <strong>25% increase</strong>.</p>
+    <h2>Tips</h2><ul><li>To get your exam percentage, use "X is what percent of Y" with marks and total marks.</li><li>Percentage change is measured against the old value.</li><li>Round only at the end to avoid small errors.</li></ul>
+    <h2>Frequently Asked Questions</h2><details><summary>Can I enter decimals?</summary><p>Yes. Decimals and negative values are accepted where they make sense.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
+    <h2>Related tools</h2><div class="grid related"><a class="card" href="grade.html"><div class="ic" aria-hidden="true"><i data-icon="award"></i></div><h3>Grade Calculator</h3><p>Turn scores and weights into your overall grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="final-exam.html"><div class="ic" aria-hidden="true"><i data-icon="clipboard-check"></i></div><h3>Final Exam Required Marks</h3><p>See what you need in the final exam to hit a grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="unit-converter.html"><div class="ic" aria-hidden="true"><i data-icon="arrow-left-right"></i></div><h3>Unit Converter</h3><p>Convert length, weight and temperature.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+  </article>
+</main>
+<footer class="footer">
+  <div class="container fgrid">
+    <div class="fbrand">
+      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
+      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+      <div class="social">
+        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <!-- Add real social profile links here once the accounts exist. -->
+      </div>
+    </div>
+    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
+    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
+    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+  </div>
+  <div class="container fbar">
+    <p>© 2026 Student Tools. All rights reserved.</p>
+    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
+    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+  </div>
+</footer>
+<script src="../js/icons.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/calculators.js"></script><script src="../js/calc-core.js"></script><script src="../js/main.js"></script>
+</body>
+</html>

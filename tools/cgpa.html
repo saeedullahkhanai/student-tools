@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CGPA Calculator - Calculate Your CGPA</title>
+<meta name="description" content="Combine the GPA and credits of each semester to calculate your cumulative GPA (CGPA) quickly, using the credit-weighted method.">
+<link rel="canonical" href="https://example.com/tools/cgpa.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Student Tools">
+<meta property="og:title" content="CGPA Calculator - Calculate Your CGPA">
+<meta property="og:description" content="Combine the GPA and credits of each semester to calculate your cumulative GPA (CGPA) quickly, using the credit-weighted method.">
+<meta property="og:url" content="https://example.com/tools/cgpa.html">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<script>
+  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+</script>
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CGPA Calculator","url":"https://example.com/tools/cgpa.html","description":"Combine the GPA and credits of each semester to calculate your cumulative GPA (CGPA) quickly, using the credit-weighted method.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://example.com/tools/index.html"},{"@type":"ListItem","position":3,"name":"CGPA Calculator","item":"https://example.com/tools/cgpa.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
+    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+    <div class="actions">
+      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">CGPA Calculator</li></ol></nav>
+  <header class="tool-head"><h1>CGPA Calculator</h1><p>Combine the GPA and credits of each semester into one cumulative GPA.</p></header>
+  <section class="calc" aria-label="CGPA calculator"><form class="card panel" data-calc="cgpa" novalidate><div class="rows" data-rows></div><button type="button" class="btn btn-ghost add" data-add><i data-icon="plus"></i> Add semester</button><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section>
+  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+  <article class="content">
+    <h2>How it works</h2><p>Enter the GPA and total credits for every semester. Each semester is weighted by its credits.</p><p class="guide-link">Want a step-by-step explanation? Read <a href="../guides/calculate-cgpa.html">How to Calculate CGPA</a>.</p>
+    <h2>Formula</h2><div class="formula">CGPA = Σ (Semester GPA × Credits) ÷ Σ Credits</div>
+    <h2>Example</h2><p>Semester 1: GPA 3.2 with 15 credits. Semester 2: GPA 3.6 with 18 credits. (48 + 64.8) ÷ 33 = <strong>3.42</strong>.</p>
+    <h2>Tips</h2><ul><li>Use the same scale for every semester (4.0, 5.0 or 10).</li><li>Some institutions simply average semesters. Check which method yours uses.</li><li>Add a row for each semester using the button below the table.</li></ul>
+    <h2>Frequently Asked Questions</h2><details><summary>Is CGPA the same as GPA?</summary><p>GPA usually means one semester. CGPA covers all semesters together.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
+    <h2>Related tools</h2><div class="grid related"><a class="card" href="gpa-goal.html"><div class="ic" aria-hidden="true"><i data-icon="target"></i></div><h3>GPA Goal Calculator</h3><p>Find the GPA you need to reach your target CGPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="semester-gpa.html"><div class="ic" aria-hidden="true"><i data-icon="graduation-cap"></i></div><h3>Semester GPA Calculator</h3><p>Calculate your GPA for the semester.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+  </article>
+</main>
+<footer class="footer">
+  <div class="container fgrid">
+    <div class="fbrand">
+      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
+      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+      <div class="social">
+        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <!-- Add real social profile links here once the accounts exist. -->
+      </div>
+    </div>
+    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
+    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
+    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+  </div>
+  <div class="container fbar">
+    <p>© 2026 Student Tools. All rights reserved.</p>
+    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
+    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+  </div>
+</footer>
+<script src="../js/icons.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/calculators.js"></script><script src="../js/calc-core.js"></script><script src="../js/main.js"></script>
+</body>
+</html>

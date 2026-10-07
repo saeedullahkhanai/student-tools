@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit Converter - Length, Weight &amp; Temperature</title>
+<meta name="description" content="Convert between common units of length, weight and temperature instantly, including km, miles, kg, pounds, Celsius and Fahrenheit.">
+<link rel="canonical" href="https://example.com/tools/unit-converter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Student Tools">
+<meta property="og:title" content="Unit Converter - Length, Weight &amp; Temperature">
+<meta property="og:description" content="Convert between common units of length, weight and temperature instantly, including km, miles, kg, pounds, Celsius and Fahrenheit.">
+<meta property="og:url" content="https://example.com/tools/unit-converter.html">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<script>
+  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+</script>
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Unit Converter","url":"https://example.com/tools/unit-converter.html","description":"Convert between common units of length, weight and temperature instantly, including km, miles, kg, pounds, Celsius and Fahrenheit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://example.com/tools/index.html"},{"@type":"ListItem","position":3,"name":"Unit Converter","item":"https://example.com/tools/unit-converter.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
+    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+    <div class="actions">
+      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="container">
+  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Unit Converter</li></ol></nav>
+  <header class="tool-head"><h1>Unit Converter</h1><p>Convert between common units of length, weight and temperature instantly.</p></header>
+  <section class="calc" aria-label="Unit converter"><div class="card panel">
+<div class="field"><label for="category">Category</label><select id="category"><option value="length">Length</option><option value="weight">Weight</option><option value="temperature">Temperature</option></select></div>
+<div class="field"><label for="value">Value</label><input id="value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 5" aria-describedby="value-err"><p class="err" id="value-err" role="alert"></p></div>
+<div class="field"><label for="from">From</label><select id="from"></select></div><div class="field"><label for="to">To</label><select id="to"></select></div><div class="btns"><button type="button" class="btn btn-ghost" id="swap"><i data-icon="arrow-left-right"></i> Swap units</button></div></div>
+<section class="card panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty" id="empty" hidden>Enter a value to convert.</p><div id="out"><p class="label">Converted value</p><p class="big" id="big"></p><p class="note" id="note"></p></div></section></section>
+  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+  <article class="content">
+    <h2>How it works</h2><p>Choose a category, enter a value and pick the units. The result updates as you type.</p>
+    <h2>Formula</h2><div class="formula">Result = Value × (From factor ÷ To factor)</div><p>Temperature: °F = °C × 9 ÷ 5 + 32, and K = °C + 273.15.</p>
+    <h2>Example</h2><p>5 km = <strong>3.1069 mi</strong>. 98.6 °F = <strong>37 °C</strong>.</p>
+    <h2>Tips</h2><ul><li>Use Swap to reverse the conversion.</li><li>Very small or large results are shown to 8 significant digits.</li><li>More unit types may be added later.</li></ul>
+    <h2>Frequently Asked Questions</h2><details><summary>How accurate is it?</summary><p>Conversion factors are exact international standards, shown rounded to 8 significant digits.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
+    <h2>Related tools</h2><div class="grid related"><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="date-diff.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-range"></i></div><h3>Days Between Dates</h3><p>Find the number of days between two dates.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="word-counter.html"><div class="ic" aria-hidden="true"><i data-icon="type"></i></div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+  </article>
+</main>
+<footer class="footer">
+  <div class="container fgrid">
+    <div class="fbrand">
+      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
+      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+      <div class="social">
+        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <!-- Add real social profile links here once the accounts exist. -->
+      </div>
+    </div>
+    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
+    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
+    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+  </div>
+  <div class="container fbar">
+    <p>© 2026 Student Tools. All rights reserved.</p>
+    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
+    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+  </div>
+</footer>
+<script src="../js/icons.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/unit-converter.js"></script><script src="../js/main.js"></script>
+</body>
+</html>
