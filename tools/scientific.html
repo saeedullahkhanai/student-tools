@@ -3,70 +3,726 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scientific Calculator - Free Online with History</title>
-<meta name="description" content="Free online scientific calculator with sin, cos, tan, logarithms, powers, roots, factorials, Deg/Rad mode and a calculation history.">
+
+<title>Scientific Calculator - Free Online Scientific Calculator</title>
+<meta name="description" content="Free online scientific calculator with sin, cos, tan, logarithms, powers, roots, factorials, Deg/Rad mode and calculation history.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/scientific.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="Scientific Calculator - Free Online with History">
-<meta property="og:description" content="Free online scientific calculator with sin, cos, tan, logarithms, powers, roots, factorials, Deg/Rad mode and a calculation history.">
+<meta property="og:title" content="Scientific Calculator - Free Online Scientific Calculator">
+<meta property="og:description" content="Free online scientific calculator with sin, cos, tan, logarithms, powers, roots, factorials, Deg/Rad mode and calculation history.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/scientific.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Scientific Calculator","url":"https://saeedullahkhanai.github.io/student-tools/tools/scientific.html","description":"Free online scientific calculator with sin, cos, tan, logarithms, powers, roots, factorials, Deg/Rad mode and a calculation history.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Scientific Calculator","item":"https://saeedullahkhanai.github.io/student-tools/tools/scientific.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Scientific Calculator",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/scientific.html",
+  "description": "Free online scientific calculator with trigonometry, logarithms, powers, roots, factorials, degree and radian modes, and calculation history.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Scientific Calculator",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/scientific.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can a scientific calculator calculate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This scientific calculator supports arithmetic, trigonometric functions, logarithms, powers, square roots, factorials, percentages and constants such as pi and e."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Deg and Rad mode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Degree mode interprets trigonometric angles in degrees, while radian mode interprets angles in radians. Choose the mode that matches your calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a square root?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the square root button and enter the value inside the brackets. For example, square root of 144 is 12."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the scientific calculator with my keyboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can use digits, arithmetic operators, brackets, powers and other supported keyboard inputs. Enter calculates, Backspace deletes, and Escape clears."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Scientific Calculator save my information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculations are performed in your browser. No calculation data is sent to a server."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
+
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode"
+      >
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
+
   </div>
+
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Scientific Calculator</li></ol></nav>
-  <header class="tool-head"><h1>Scientific Calculator</h1><p>A free online scientific calculator with trigonometry, logarithms, powers, roots, factorials and a calculation history.</p></header>
-  <section class="calc sci-layout" aria-label="Scientific calculator"><div class="card panel" id="sci"><div class="sci-screen"><div class="sci-expr" id="sciExpr">0</div><div class="sci-res preview" id="sciRes">0</div></div><div class="keys"><button type="button" class="key fn" data-v="act:deg" id="degBtn" aria-label="Angle mode: degrees. Press to switch.">Deg</button><button type="button" class="key fn" data-v="(" aria-label="Open bracket">(</button><button type="button" class="key fn" data-v=")" aria-label="Close bracket">)</button><button type="button" class="key fn" data-v="%" aria-label="Percent">%</button><button type="button" class="key ac" data-v="act:ac" aria-label="All clear">AC</button><button type="button" class="key fn" data-v="sin(">sin</button><button type="button" class="key fn" data-v="cos(">cos</button><button type="button" class="key fn" data-v="tan(">tan</button><button type="button" class="key fn" data-v="ln(">ln</button><button type="button" class="key fn" data-v="log(">log</button><button type="button" class="key fn" data-v="asin(" aria-label="Inverse sine">sin⁻¹</button><button type="button" class="key fn" data-v="acos(" aria-label="Inverse cosine">cos⁻¹</button><button type="button" class="key fn" data-v="atan(" aria-label="Inverse tangent">tan⁻¹</button><button type="button" class="key fn" data-v="π" aria-label="Pi">π</button><button type="button" class="key fn" data-v="e" aria-label="Euler number">e</button><button type="button" class="key fn" data-v="^2" aria-label="Square">x²</button><button type="button" class="key fn" data-v="√(" aria-label="Square root">√</button><button type="button" class="key fn" data-v="^" aria-label="Power">xʸ</button><button type="button" class="key fn" data-v="act:inv" aria-label="Reciprocal">1/x</button><button type="button" class="key fn" data-v="!" aria-label="Factorial">n!</button><button type="button" class="key num" data-v="7">7</button><button type="button" class="key num" data-v="8">8</button><button type="button" class="key num" data-v="9">9</button><button type="button" class="key op" data-v="÷" aria-label="Divide">÷</button><button type="button" class="key ac" data-v="act:del" aria-label="Delete"><i data-icon="delete"></i></button><button type="button" class="key num" data-v="4">4</button><button type="button" class="key num" data-v="5">5</button><button type="button" class="key num" data-v="6">6</button><button type="button" class="key op" data-v="×" aria-label="Multiply">×</button><button type="button" class="key fn" data-v="Ans" aria-label="Previous answer">Ans</button><button type="button" class="key num" data-v="1">1</button><button type="button" class="key num" data-v="2">2</button><button type="button" class="key num" data-v="3">3</button><button type="button" class="key op" data-v="−" aria-label="Subtract">−</button><button type="button" class="key op" data-v="+" aria-label="Add">+</button><button type="button" class="key num" data-v="0">0</button><button type="button" class="key num" data-v="." aria-label="Decimal point">.</button><button type="button" class="key eq" data-v="act:eq" aria-label="Equals">=</button></div><p class="hint">Keyboard: digits, + - * / ^ ( ) !, Enter for equals, Backspace to delete, Esc to clear.</p></div><section class="card panel" aria-label="History"><h2 class="res-title">History</h2><div id="history"></div><button type="button" class="btn btn-ghost" id="clearHist">Clear history</button></section><p class="sr" id="sciLive" aria-live="polite"></p></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Tools</a></li>
+      <li aria-current="page">Scientific Calculator</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+
+    <h1>Scientific Calculator</h1>
+
+    <p>
+      Use this free online scientific calculator for trigonometry,
+      logarithms, powers, roots, factorials, percentages and common
+      scientific calculations with Deg/Rad modes and calculation history.
+    </p>
+
+  </header>
+
+  <section class="calc sci-layout" aria-label="Scientific calculator">
+
+    <div class="card panel" id="sci">
+
+      <div class="sci-screen">
+        <div class="sci-expr" id="sciExpr">0</div>
+        <div class="sci-res preview" id="sciRes">0</div>
+      </div>
+
+      <div class="keys">
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="act:deg"
+          id="degBtn"
+          aria-label="Angle mode: degrees. Press to switch."
+        >
+          Deg
+        </button>
+
+        <button type="button" class="key fn" data-v="(" aria-label="Open bracket">(</button>
+        <button type="button" class="key fn" data-v=")" aria-label="Close bracket">)</button>
+        <button type="button" class="key fn" data-v="%" aria-label="Percent">%</button>
+
+        <button type="button" class="key ac" data-v="act:ac" aria-label="All clear">
+          AC
+        </button>
+
+        <button type="button" class="key fn" data-v="sin(">sin</button>
+        <button type="button" class="key fn" data-v="cos(">cos</button>
+        <button type="button" class="key fn" data-v="tan(">tan</button>
+        <button type="button" class="key fn" data-v="ln(">ln</button>
+        <button type="button" class="key fn" data-v="log(">log</button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="asin("
+          aria-label="Inverse sine"
+        >
+          sin⁻¹
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="acos("
+          aria-label="Inverse cosine"
+        >
+          cos⁻¹
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="atan("
+          aria-label="Inverse tangent"
+        >
+          tan⁻¹
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="π"
+          aria-label="Pi"
+        >
+          π
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="e"
+          aria-label="Euler number"
+        >
+          e
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="^2"
+          aria-label="Square"
+        >
+          x²
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="√("
+          aria-label="Square root"
+        >
+          √
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="^"
+          aria-label="Power"
+        >
+          xʸ
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="act:inv"
+          aria-label="Reciprocal"
+        >
+          1/x
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="!"
+          aria-label="Factorial"
+        >
+          n!
+        </button>
+
+        <button type="button" class="key num" data-v="7">7</button>
+        <button type="button" class="key num" data-v="8">8</button>
+        <button type="button" class="key num" data-v="9">9</button>
+
+        <button
+          type="button"
+          class="key op"
+          data-v="÷"
+          aria-label="Divide"
+        >
+          ÷
+        </button>
+
+        <button
+          type="button"
+          class="key ac"
+          data-v="act:del"
+          aria-label="Delete"
+        >
+          <i data-icon="delete"></i>
+        </button>
+
+        <button type="button" class="key num" data-v="4">4</button>
+        <button type="button" class="key num" data-v="5">5</button>
+        <button type="button" class="key num" data-v="6">6</button>
+
+        <button
+          type="button"
+          class="key op"
+          data-v="×"
+          aria-label="Multiply"
+        >
+          ×
+        </button>
+
+        <button
+          type="button"
+          class="key fn"
+          data-v="Ans"
+          aria-label="Previous answer"
+        >
+          Ans
+        </button>
+
+        <button type="button" class="key num" data-v="1">1</button>
+        <button type="button" class="key num" data-v="2">2</button>
+        <button type="button" class="key num" data-v="3">3</button>
+
+        <button
+          type="button"
+          class="key op"
+          data-v="−"
+          aria-label="Subtract"
+        >
+          −
+        </button>
+
+        <button
+          type="button"
+          class="key op"
+          data-v="+"
+          aria-label="Add"
+        >
+          +
+        </button>
+
+        <button type="button" class="key num" data-v="0">0</button>
+
+        <button
+          type="button"
+          class="key num"
+          data-v="."
+          aria-label="Decimal point"
+        >
+          .
+        </button>
+
+        <button
+          type="button"
+          class="key eq"
+          data-v="act:eq"
+          aria-label="Equals"
+        >
+          =
+        </button>
+
+      </div>
+
+      <p class="hint">
+        Keyboard: digits, + - * / ^ ( ) !, Enter for equals,
+        Backspace to delete, Esc to clear.
+      </p>
+
+    </div>
+
+    <section class="card panel" aria-label="History">
+
+      <h2 class="res-title">Calculation History</h2>
+
+      <div id="history"></div>
+
+      <button
+        type="button"
+        class="btn btn-ghost"
+        id="clearHist"
+      >
+        Clear history
+      </button>
+
+    </section>
+
+    <p class="sr" id="sciLive" aria-live="polite"></p>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
+  </div>
+
   <article class="content">
-    <h2>How it works</h2><p>Type with the buttons or your keyboard. The result previews as you type and brackets close automatically. Press = to save the calculation in the history, then click any entry to reuse it. Choose <strong>Deg</strong> or <strong>Rad</strong> for angles.</p>
-    <h2>Formula</h2><div class="formula">Order of operations: brackets → functions and powers → × ÷ → + −</div><p>Examples of what you can type: <code>2×(3+4)^2</code>, <code>sin(30)</code>, <code>√(144)</code>, <code>5!</code>, <code>log(1000)</code>.</p>
-    <h2>Example</h2><p><strong>2 × (3 + 4)² = 98.</strong> In Deg mode <strong>sin(30) = 0.5</strong>. <strong>√(144) = 12</strong> and <strong>5! = 120</strong>.</p>
-    <h2>Tips</h2><ul><li>Check the Deg/Rad setting before using sin, cos or tan.</li><li>% divides a number by 100, so 50 + 10% gives 50.1.</li><li>After pressing =, start with an operator to continue from the answer, or a number to start fresh.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>Is it safe to type any expression?</summary><p>Yes. Expressions are parsed by the calculator itself, not run as code, and nothing leaves your browser.</p></details><details><summary>Why do I see "Invalid input"?</summary><p>The value is outside the allowed range, such as the square root of a negative number, ln(0) or a factorial of a decimal.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="unit-converter.html"><div class="ic" aria-hidden="true"><i data-icon="arrow-left-right"></i></div><h3>Unit Converter</h3><p>Convert length, weight and temperature.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="grade.html"><div class="ic" aria-hidden="true"><i data-icon="award"></i></div><h3>Grade Calculator</h3><p>Turn scores and weights into your overall grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+
+    <h2>How to Use the Scientific Calculator</h2>
+
+    <p>
+      Enter numbers and mathematical expressions using the calculator
+      buttons or your keyboard. The calculator supports common arithmetic,
+      trigonometric functions, logarithms, powers, roots, factorials,
+      percentages and mathematical constants.
+    </p>
+
+    <p>
+      The result previews as you type. Press the equals button to complete
+      a calculation and save it in the calculation history.
+    </p>
+
+    <h2>Scientific Calculator Functions</h2>
+
+    <ul>
+      <li><strong>sin, cos and tan:</strong> Calculate trigonometric values.</li>
+      <li><strong>sin⁻¹, cos⁻¹ and tan⁻¹:</strong> Calculate inverse trigonometric values.</li>
+      <li><strong>ln and log:</strong> Calculate logarithms.</li>
+      <li><strong>x²:</strong> Square a number.</li>
+      <li><strong>xʸ:</strong> Calculate powers.</li>
+      <li><strong>√:</strong> Calculate square roots.</li>
+      <li><strong>n!:</strong> Calculate factorials.</li>
+      <li><strong>π and e:</strong> Use common mathematical constants.</li>
+      <li><strong>Ans:</strong> Reuse the previous answer.</li>
+    </ul>
+
+    <h2>Order of Operations</h2>
+
+    <p>
+      The calculator follows the normal order of mathematical operations.
+    </p>
+
+    <div class="formula">
+      Brackets → Functions and Powers → Multiplication and Division → Addition and Subtraction
+    </div>
+
+    <h2>Scientific Calculator Examples</h2>
+
+    <p>
+      <strong>2 × (3 + 4)² = 98</strong>
+    </p>
+
+    <p>
+      In Degree mode:
+      <strong>sin(30) = 0.5</strong>
+    </p>
+
+    <p>
+      <strong>√(144) = 12</strong>
+    </p>
+
+    <p>
+      <strong>5! = 120</strong>
+    </p>
+
+    <p>
+      <strong>log(1000) = 3</strong>
+    </p>
+
+    <h2>Degrees and Radians</h2>
+
+    <p>
+      Trigonometric calculations can use either degrees or radians.
+      Use <strong>Deg</strong> when your angle is expressed in degrees.
+      Switch to <strong>Rad</strong> when working with radians.
+    </p>
+
+    <p>
+      For example, in Degree mode:
+      <strong>sin(30) = 0.5</strong>.
+    </p>
+
+    <h2>Scientific Calculator Keyboard Shortcuts</h2>
+
+    <ul>
+      <li>Use number keys for digits.</li>
+      <li>Use +, -, *, / and ^ for common operations.</li>
+      <li>Use brackets for grouped expressions.</li>
+      <li>Press Enter to calculate.</li>
+      <li>Press Backspace to delete.</li>
+      <li>Press Escape to clear the calculator.</li>
+    </ul>
+
+    <h2>Tips for Using a Scientific Calculator</h2>
+
+    <ul>
+      <li>Check the Deg/Rad setting before using trigonometric functions.</li>
+      <li>Use brackets to make the order of your calculation clear.</li>
+      <li>Check the expression before pressing equals.</li>
+      <li>Use the history section to review previous calculations.</li>
+      <li>Use Ans when you want to continue from the previous result.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What can a scientific calculator calculate?</summary>
+      <p>
+        This calculator supports arithmetic, trigonometric functions,
+        logarithms, powers, square roots, factorials, percentages and
+        constants such as pi and e.
+      </p>
+    </details>
+
+    <details>
+      <summary>What is the difference between Deg and Rad mode?</summary>
+      <p>
+        Degree mode interprets trigonometric angles in degrees, while
+        radian mode interprets angles in radians. Choose the mode that
+        matches your calculation.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I calculate a square root?</summary>
+      <p>
+        Use the square root button and enter the value inside the brackets.
+        For example, √(144) is 12.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I use the calculator with my keyboard?</summary>
+      <p>
+        Yes. You can use digits, arithmetic operators, brackets, powers
+        and other supported keyboard inputs. Enter calculates, Backspace
+        deletes, and Escape clears.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why might I see Invalid input?</summary>
+      <p>
+        An invalid result can occur when the expression is not supported
+        or the mathematical operation is outside its valid range, such as
+        a square root of a negative value or a factorial of an unsupported value.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the Scientific Calculator save my information?</summary>
+      <p>
+        Calculations are performed in your browser. No calculation data
+        is sent to a server.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="percentage.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="percent"></i>
+        </div>
+        <h3>Percentage Calculator</h3>
+        <p>
+          Calculate percentages, shares and percentage changes.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+      <a class="card" href="unit-converter.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="arrow-left-right"></i>
+        </div>
+        <h3>Unit Converter</h3>
+        <p>
+          Convert common length, weight and temperature units.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+      <a class="card" href="grade.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="award"></i>
+        </div>
+        <h3>Grade Calculator</h3>
+        <p>
+          Calculate your weighted course grade from scores and weights.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
   </article>
+
 </main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
         <!-- Add real social profile links here once the accounts exist. -->
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </nav>
+
   </div>
+
   <div class="container fbar">
+
     <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/scientific.js"></script><script src="../js/main.js"></script>
+<script src="../js/scientific.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

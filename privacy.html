@@ -3,56 +3,316 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Privacy Policy - Student Tools</title>
-<meta name="description" content="How Student Tools handles your data: calculator inputs stay in your browser and only your theme preference is saved on your own device.">
+
+<meta name="description" content="Read the Student Tools Privacy Policy to learn how calculator inputs, theme preferences and website information are handled.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/privacy.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
 <meta property="og:title" content="Privacy Policy - Student Tools">
-<meta property="og:description" content="How Student Tools handles your data: calculator inputs stay in your browser and only your theme preference is saved on your own device.">
+<meta property="og:description" content="Read the Student Tools Privacy Policy to learn how calculator inputs, theme preferences and website information are handled.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/privacy.html">
+
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Privacy Policy","item":"https://saeedullahkhanai.github.io/student-tools/privacy.html"}]}</script>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tools.css">
+
+<!-- Privacy Policy Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy - Student Tools",
+  "url": "https://saeedullahkhanai.github.io/student-tools/privacy.html",
+  "description": "Privacy Policy for Student Tools and its free online calculators and study utilities.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy Policy",
+      "item": "https://saeedullahkhanai.github.io/student-tools/privacy.html"
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="index.html" data-nav="home">Home</a><a href="tools/index.html" data-nav="tools">All Tools</a><a href="guides/index.html" data-nav="guides">Guides</a><a href="about.html" data-nav="about">About</a><a href="contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="tools/index.html" data-nav="tools">All Tools</a>
+      <a href="guides/index.html" data-nav="guides">Guides</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
-<main id="main" class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Privacy Policy</li></ol></nav><article class="content"><h1>Privacy Policy</h1><p>Calculator inputs are processed in your browser and are not sent to our servers.</p><p>We save your light or dark theme choice in your browser storage on your device.</p><p>If advertising or analytics are added later, this policy must be updated to explain cookies and data use.</p><p><em>Placeholder content: review and customise before publishing.</em></p></article></main>
+
+<main id="main" class="container">
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Privacy Policy</li>
+    </ol>
+  </nav>
+
+  <article class="content">
+
+    <h1>Privacy Policy</h1>
+
+    <p>
+      This Privacy Policy explains how Student Tools handles information
+      when you use this website and its free calculators and study tools.
+    </p>
+
+    <p>
+      Student Tools is designed to provide simple browser-based utilities
+      without requiring users to create an account for the main tools.
+    </p>
+
+    <h2>Information You Enter Into Calculators</h2>
+
+    <p>
+      The calculators on Student Tools are designed to process the values
+      you enter directly in your browser. Calculator inputs are not
+      intentionally sent to a Student Tools server for processing.
+    </p>
+
+    <p>
+      You should still avoid entering passwords, financial information,
+      private identification numbers or other sensitive information into
+      website tools.
+    </p>
+
+    <h2>Theme Preference</h2>
+
+    <p>
+      Student Tools allows you to choose between light and dark display
+      modes. Your selected theme preference may be stored in your browser's
+      local storage on your own device so that the website can remember
+      your display preference.
+    </p>
+
+    <p>
+      This theme preference is stored locally in your browser rather than
+      being used as an account profile on Student Tools.
+    </p>
+
+    <h2>Cookies and Similar Technologies</h2>
+
+    <p>
+      The current website does not require an account or use cookies to
+      process calculator inputs. Browser storage may be used for the
+      website's theme preference.
+    </p>
+
+    <p>
+      If advertising, analytics, cookies or other third-party services are
+      added in the future, this Privacy Policy should be updated to explain
+      the relevant services and information practices before or when those
+      features are introduced.
+    </p>
+
+    <h2>Third-Party Services</h2>
+
+    <p>
+      Student Tools is hosted using GitHub Pages. Visiting a hosted website
+      may involve technical information being handled by the hosting
+      provider according to its own policies.
+    </p>
+
+    <p>
+      Student Tools does not intentionally collect calculator input values
+      on its own server.
+    </p>
+
+    <h2>External Links</h2>
+
+    <p>
+      Student Tools may link to external websites or resources when they
+      are useful to visitors. External websites have their own privacy
+      policies and terms, and Student Tools does not control their privacy
+      practices.
+    </p>
+
+    <h2>Children and Students</h2>
+
+    <p>
+      The website provides general educational tools and does not require
+      users to create an account to use the main calculators. Users should
+      avoid submitting unnecessary personal or sensitive information
+      through any website.
+    </p>
+
+    <h2>Changes to This Privacy Policy</h2>
+
+    <p>
+      This Privacy Policy may be updated when the website's features,
+      advertising, analytics or data practices change. The updated version
+      will be published on this page.
+    </p>
+
+    <h2>Contact</h2>
+
+    <p>
+      If you have questions about this Privacy Policy or the website's
+      information practices, visit the
+      <a href="contact.html">Contact page</a>.
+    </p>
+
+    <h2>Related Pages</h2>
+
+    <ul>
+      <li><a href="terms.html">Terms of Use</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="about.html">About Student Tools</a></li>
+    </ul>
+
+  </article>
+
+</main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
+        <a href="contact.html" aria-label="Contact Student Tools">
+          <i data-icon="mail"></i>
+        </a>
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="tools/attendance.html">Attendance Calculator</a><a href="tools/semester-gpa.html">Semester GPA Calculator</a><a href="tools/cgpa.html">CGPA Calculator</a><a href="tools/scientific.html">Scientific Calculator</a><a href="tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="tools/index.html">All Tools</a><a href="guides/index.html">Guides</a><a href="index.html#faqH">FAQ</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="tools/attendance.html">Attendance Calculator</a>
+      <a href="tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="tools/cgpa.html">CGPA Calculator</a>
+      <a href="tools/scientific.html">Scientific Calculator</a>
+      <a href="tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="tools/index.html">All Tools</a>
+      <a href="guides/index.html">Guides</a>
+      <a href="index.html#faqH">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+
   </div>
+
   <div class="container fbar">
+
     <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="js/icons.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>

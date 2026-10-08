@@ -3,65 +3,529 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to Calculate GPA - Step-by-Step Guide</title>
-<meta name="description" content="Learn how to calculate GPA step by step using credits and grade points, with a 4.0 grade table and a worked example.">
+
+<title>How to Calculate GPA - Formula, Grade Points &amp; Example</title>
+
+<meta name="description" content="Learn how to calculate semester GPA step by step using credit hours and grade points, with the GPA formula, 4.0 scale table and worked example.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/guides/calculate-gpa.html">
+
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="How to Calculate GPA - Step-by-Step Guide">
-<meta property="og:description" content="Learn how to calculate GPA step by step using credits and grade points, with a 4.0 grade table and a worked example.">
+<meta property="og:title" content="How to Calculate GPA - Formula, Grade Points &amp; Example">
+<meta property="og:description" content="Learn how to calculate semester GPA step by step using credit hours and grade points, with the GPA formula, 4.0 scale table and worked example.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/guides/calculate-gpa.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate GPA","description":"Learn how to calculate GPA step by step using credits and grade points, with a 4.0 grade table and a worked example.","mainEntityOfPage":{"@type":"WebPage","@id":"https://saeedullahkhanai.github.io/student-tools/guides/calculate-gpa.html"},"inLanguage":"en","author":{"@type":"Organization","name":"Student Tools"},"publisher":{"@type":"Organization","name":"Student Tools"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://saeedullahkhanai.github.io/student-tools/guides/index.html"},{"@type":"ListItem","position":3,"name":"How to Calculate GPA","item":"https://saeedullahkhanai.github.io/student-tools/guides/calculate-gpa.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate GPA",
+  "description": "Learn how to calculate semester GPA step by step using credit hours and grade points.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://saeedullahkhanai.github.io/student-tools/guides/calculate-gpa.html"
+  },
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Student Tools"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Student Tools"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://saeedullahkhanai.github.io/student-tools/guides/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Calculate GPA",
+      "item": "https://saeedullahkhanai.github.io/student-tools/guides/calculate-gpa.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GPA, or Grade Point Average, is a credit-weighted average of the grade points earned in your courses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is GPA calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply each course's credit hours by its grade points, add the quality points, and divide the total by the total number of credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do credit hours matter in GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Courses with more credit hours have a greater effect on the GPA because the calculation weights grade points by credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does every university use the same GPA scale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Universities can use different grade-point scales and grading policies, so students should check their institution's official policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my semester GPA with Student Tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Student Tools provides a Semester GPA Calculator that uses course credits and letter grades to calculate GPA."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools">All Tools</a><a href="../guides/index.html" data-nav="guides" aria-current="true">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides" aria-current="true">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Guides</a></li><li aria-current="page">How to Calculate GPA</li></ol></nav>
-  <header class="tool-head"><span class="tag">GPA</span><h1>How to Calculate GPA</h1><p>Understand credits, grade points and how to work out your semester GPA.</p></header>
-  <article class="content"><h2>What is GPA?</h2><p>GPA (Grade Point Average) is the average of your grade points, weighted by the credit hours of each course. A 4-credit course counts more than a 2-credit course.</p><h2>Grade points (common 4.0 scale)</h2><table><thead><tr><th>Letter grade</th><th>Grade points</th></tr></thead><tbody><tr><td>A</td><td>4.0</td></tr><tr><td>A-</td><td>3.7</td></tr><tr><td>B+</td><td>3.3</td></tr><tr><td>B</td><td>3.0</td></tr><tr><td>B-</td><td>2.7</td></tr><tr><td>C+</td><td>2.3</td></tr><tr><td>C</td><td>2.0</td></tr><tr><td>C-</td><td>1.7</td></tr><tr><td>D+</td><td>1.3</td></tr><tr><td>D</td><td>1.0</td></tr><tr><td>F</td><td>0.0</td></tr></tbody></table><p>Your institution may use different values, so check your grading policy.</p><h2>The formula</h2><div class="formula">GPA = Σ (Credits × Grade Points) ÷ Σ Credits</div><h2>Step by step</h2><ol><li>List each course with its credits and grade points.</li><li>Multiply credits by grade points for each course.</li><li>Add all those results together (quality points).</li><li>Divide by the total credits.</li></ol><h2>Example</h2><p>3 credits of A (4.0), 4 credits of B (3.0), 3 credits of A- (3.7): 12 + 12 + 11.1 = 35.1 quality points. Total credits = 10. GPA = 35.1 ÷ 10 = <strong>3.51</strong>.</p><h2>Tips</h2><ul><li>Do not average the grade points without credits unless every course has equal credits.</li><li>Courses graded pass/fail are usually left out.</li></ul></article>
-  <h2 class="sec">Try the calculator</h2>
-  <a class="card cta" href="../tools/semester-gpa.html"><div class="ic" aria-hidden="true"><i data-icon="graduation-cap"></i></div><h3>Try the Semester GPA Calculator</h3><p>Calculate your GPA for the semester.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
-  <h2 class="sec">More guides</h2><div class="grid"><a class="card" href="attendance-percentage.html"><div class="ic" aria-hidden="true"><i data-icon="book-open"></i></div><span class="tag">Attendance</span><h3>How to Calculate Attendance Percentage</h3><p>A simple formula, worked examples, and how to find how many classes you can miss.</p><span class="mini-btn ghost">Read Guide<i data-icon="arrow-right"></i></span></a><a class="card" href="final-exam-marks.html"><div class="ic" aria-hidden="true"><i data-icon="book-open"></i></div><span class="tag">Exams</span><h3>How Many Marks Do I Need in My Final Exam?</h3><p>Work out the score you need in the final exam to reach your target grade.</p><span class="mini-btn ghost">Read Guide<i data-icon="arrow-right"></i></span></a><a class="card" href="calculate-cgpa.html"><div class="ic" aria-hidden="true"><i data-icon="book-open"></i></div><span class="tag">GPA</span><h3>How to Calculate CGPA</h3><p>Combine several semesters into one cumulative GPA, the right way.</p><span class="mini-btn ghost">Read Guide<i data-icon="arrow-right"></i></span></a></div>
-</main>
-<footer class="footer">
-  <div class="container fgrid">
-    <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
-      <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
-      </div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Guides</a></li>
+      <li aria-current="page">How to Calculate GPA</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+    <span class="tag">GPA</span>
+    <h1>How to Calculate GPA</h1>
+    <p>
+      Learn how to calculate semester GPA using credit hours, letter grades
+      and grade points, with a simple worked example.
+    </p>
+  </header>
+
+  <article class="content">
+
+    <h2>What Is GPA?</h2>
+
+    <p>
+      GPA stands for Grade Point Average. It represents your academic
+      performance by combining the grade points you earn in your courses
+      and weighting them according to credit hours.
+    </p>
+
+    <p>
+      A course with more credit hours has a greater effect on your GPA than
+      a course with fewer credit hours.
+    </p>
+
+    <h2>Common 4.0 Grade-Point Scale</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Letter Grade</th>
+          <th>Grade Points</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr><td>A</td><td>4.0</td></tr>
+        <tr><td>A-</td><td>3.7</td></tr>
+        <tr><td>B+</td><td>3.3</td></tr>
+        <tr><td>B</td><td>3.0</td></tr>
+        <tr><td>B-</td><td>2.7</td></tr>
+        <tr><td>C+</td><td>2.3</td></tr>
+        <tr><td>C</td><td>2.0</td></tr>
+        <tr><td>C-</td><td>1.7</td></tr>
+        <tr><td>D+</td><td>1.3</td></tr>
+        <tr><td>D</td><td>1.0</td></tr>
+        <tr><td>F</td><td>0.0</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      This is a common 4.0 scale. Your university may use different
+      grade-point values, so always check your institution's official
+      grading policy.
+    </p>
+
+    <h2>GPA Formula</h2>
+
+    <div class="formula">
+      GPA = Σ (Credits × Grade Points) ÷ Σ Credits
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <p>
+      The calculation first finds the quality points for each course.
+      Quality points are calculated by multiplying the course credits by
+      the grade points earned.
+    </p>
+
+    <h2>How to Calculate GPA Step by Step</h2>
+
+    <ol>
+      <li>List all courses completed during the semester.</li>
+      <li>Write the credit hours for each course.</li>
+      <li>Convert each letter grade into its corresponding grade points.</li>
+      <li>Multiply the credits by the grade points for every course.</li>
+      <li>Add all quality points together.</li>
+      <li>Add all course credits together.</li>
+      <li>Divide total quality points by total credits.</li>
+    </ol>
+
+    <h2>Worked GPA Example</h2>
+
+    <p>
+      Suppose a student has three courses:
+    </p>
+
+    <ul>
+      <li>3 credits with an A grade = 4.0 points</li>
+      <li>4 credits with a B grade = 3.0 points</li>
+      <li>3 credits with an A- grade = 3.7 points</li>
+    </ul>
+
+    <p>
+      Calculate the quality points:
+    </p>
+
+    <div class="formula">
+      (3 × 4.0) + (4 × 3.0) + (3 × 3.7)
+      = 12 + 12 + 11.1
+      = 35.1
+    </div>
+
+    <p>
+      Total credits:
+    </p>
+
+    <div class="formula">
+      3 + 4 + 3 = 10 credits
+    </div>
+
+    <p>
+      Therefore:
+    </p>
+
+    <div class="formula">
+      GPA = 35.1 ÷ 10 = <strong>3.51</strong>
+    </div>
+
+    <p>
+      The student's semester GPA is approximately <strong>3.51</strong>.
+    </p>
+
+    <h2>Why Credit Hours Matter</h2>
+
+    <p>
+      GPA is normally credit-weighted. This means a 4-credit course affects
+      your GPA more than a 1-credit course.
+    </p>
+
+    <p>
+      For this reason, simply adding grade points and dividing by the number
+      of subjects may produce an incorrect result when courses have
+      different credit hours.
+    </p>
+
+    <h2>Pass/Fail Courses</h2>
+
+    <p>
+      Pass/fail courses may be handled differently from standard
+      letter-graded courses. Some institutions exclude them from GPA
+      calculations, while others have specific rules.
+    </p>
+
+    <p>
+      Check your university's official academic policy before including
+      these courses in your GPA calculation.
+    </p>
+
+    <h2>Common GPA Calculation Mistakes</h2>
+
+    <ul>
+      <li>Ignoring course credit hours.</li>
+      <li>Using the wrong grade-point value.</li>
+      <li>Simply averaging letter-grade points when credits are different.</li>
+      <li>Using a grading scale that does not match your university.</li>
+      <li>Including courses that your institution excludes from GPA.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What is GPA?</summary>
+      <p>
+        GPA is the Grade Point Average, a credit-weighted measure of academic
+        performance for a semester or another defined period.
+      </p>
+    </details>
+
+    <details>
+      <summary>How is GPA calculated?</summary>
+      <p>
+        Multiply each course's credits by its grade points, add the quality
+        points, and divide by the total number of credits.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why do credit hours matter in GPA?</summary>
+      <p>
+        Credit hours determine how strongly each course contributes to the
+        final GPA.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does every university use the same GPA scale?</summary>
+      <p>
+        No. Grading scales and academic policies vary between institutions.
+        Check your university's official grading policy.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I calculate my semester GPA with Student Tools?</summary>
+      <p>
+        Yes. Use the Semester GPA Calculator to enter your courses, credits
+        and letter grades.
+      </p>
+    </details>
+
+  </article>
+
+  <h2 class="sec">Try the GPA Calculator</h2>
+
+  <a class="card cta" href="../tools/semester-gpa.html">
+    <div class="ic" aria-hidden="true">
+      <i data-icon="graduation-cap"></i>
+    </div>
+    <h3>Semester GPA Calculator</h3>
+    <p>
+      Calculate your semester GPA using course credits and letter grades.
+    </p>
+    <span class="mini-btn">
+      Use Tool
+      <i data-icon="arrow-right"></i>
+    </span>
+  </a>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
   </div>
+
+  <h2 class="sec">More Guides</h2>
+
+  <div class="grid">
+
+    <a class="card" href="attendance-percentage.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="book-open"></i>
+      </div>
+      <span class="tag">Attendance</span>
+      <h3>How to Calculate Attendance Percentage</h3>
+      <p>
+        Learn the attendance formula and calculate classes you can miss or
+        need to attend.
+      </p>
+      <span class="mini-btn ghost">
+        Read Guide
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="final-exam-marks.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="book-open"></i>
+      </div>
+      <span class="tag">Exams</span>
+      <h3>How Many Marks Do I Need in My Final Exam?</h3>
+      <p>
+        Calculate the final exam score needed to reach your target grade.
+      </p>
+      <span class="mini-btn ghost">
+        Read Guide
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="calculate-cgpa.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="book-open"></i>
+      </div>
+      <span class="tag">CGPA</span>
+      <h3>How to Calculate CGPA</h3>
+      <p>
+        Combine semester GPAs and credits to calculate cumulative GPA.
+      </p>
+      <span class="mini-btn ghost">
+        Read Guide
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container fgrid">
+
+    <div class="fbrand">
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
+      <div class="social">
+        <a href="../contact.html" aria-label="Contact Student Tools">
+          <i data-icon="mail"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </nav>
+
+  </div>
+
   <div class="container fbar">
+
     <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>

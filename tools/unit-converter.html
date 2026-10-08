@@ -3,74 +3,534 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Unit Converter - Length, Weight &amp; Temperature</title>
-<meta name="description" content="Convert between common units of length, weight and temperature instantly, including km, miles, kg, pounds, Celsius and Fahrenheit.">
+
+<meta name="description" content="Free unit converter for length, weight and temperature. Convert km, miles, meters, kg, pounds, Celsius, Fahrenheit and more instantly in your browser.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/unit-converter.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
 <meta property="og:title" content="Unit Converter - Length, Weight &amp; Temperature">
-<meta property="og:description" content="Convert between common units of length, weight and temperature instantly, including km, miles, kg, pounds, Celsius and Fahrenheit.">
+<meta property="og:description" content="Free unit converter for length, weight and temperature. Convert km, miles, meters, kg, pounds, Celsius, Fahrenheit and more instantly in your browser.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/unit-converter.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Unit Converter","url":"https://saeedullahkhanai.github.io/student-tools/tools/unit-converter.html","description":"Convert between common units of length, weight and temperature instantly, including km, miles, kg, pounds, Celsius and Fahrenheit.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Unit Converter","item":"https://saeedullahkhanai.github.io/student-tools/tools/unit-converter.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Unit Converter",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/unit-converter.html",
+  "description": "Free unit converter for length, weight and temperature. Convert common units instantly in your browser.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Unit Converter",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/unit-converter.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can I convert with this unit converter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can convert common units of length, weight and temperature, including units such as kilometers, miles, meters, kilograms, pounds, Celsius and Fahrenheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the unit converter work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose a category, enter a value, select the unit you are converting from and select the unit you are converting to. The converted result is calculated in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I swap the units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the Swap units button to reverse the From and To units and perform the conversion in the opposite direction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are the conversions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The converter uses standard conversion factors and displays results rounded for readability. The displayed result may therefore contain fewer digits than the underlying calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my information saved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The conversion is performed in your browser and the values you enter are not sent to a server by the calculator."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Unit Converter</li></ol></nav>
-  <header class="tool-head"><h1>Unit Converter</h1><p>Convert between common units of length, weight and temperature instantly.</p></header>
-  <section class="calc" aria-label="Unit converter"><div class="card panel">
-<div class="field"><label for="category">Category</label><select id="category"><option value="length">Length</option><option value="weight">Weight</option><option value="temperature">Temperature</option></select></div>
-<div class="field"><label for="value">Value</label><input id="value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 5" aria-describedby="value-err"><p class="err" id="value-err" role="alert"></p></div>
-<div class="field"><label for="from">From</label><select id="from"></select></div><div class="field"><label for="to">To</label><select id="to"></select></div><div class="btns"><button type="button" class="btn btn-ghost" id="swap"><i data-icon="arrow-left-right"></i> Swap units</button></div></div>
-<section class="card panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty" id="empty" hidden>Enter a value to convert.</p><div id="out"><p class="label">Converted value</p><p class="big" id="big"></p><p class="note" id="note"></p></div></section></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Tools</a></li>
+      <li aria-current="page">Unit Converter</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+    <h1>Unit Converter</h1>
+    <p>
+      Use this free unit converter to convert common length, weight and
+      temperature units quickly and easily.
+    </p>
+  </header>
+
+  <!-- Unit Converter -->
+  <section class="calc" aria-label="Unit converter">
+
+    <div class="card panel">
+
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="length">Length</option>
+          <option value="weight">Weight</option>
+          <option value="temperature">Temperature</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="value">Value</label>
+        <input
+          id="value"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          value="1"
+          placeholder="e.g. 5"
+          aria-describedby="value-err">
+        <p class="err" id="value-err" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="from">From</label>
+        <select id="from"></select>
+      </div>
+
+      <div class="field">
+        <label for="to">To</label>
+        <select id="to"></select>
+      </div>
+
+      <div class="btns">
+        <button type="button" class="btn btn-ghost" id="swap">
+          <i data-icon="arrow-left-right"></i>
+          Swap units
+        </button>
+      </div>
+
+    </div>
+
+    <section class="card panel" aria-live="polite">
+
+      <h2 class="res-title">Conversion Result</h2>
+
+      <p class="empty" id="empty" hidden>
+        Enter a value to convert.
+      </p>
+
+      <div id="out">
+        <p class="label">Converted value</p>
+        <p class="big" id="big"></p>
+        <p class="note" id="note"></p>
+      </div>
+
+    </section>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
+  </div>
+
+  <!-- Educational Content -->
   <article class="content">
-    <h2>How it works</h2><p>Choose a category, enter a value and pick the units. The result updates as you type.</p>
-    <h2>Formula</h2><div class="formula">Result = Value × (From factor ÷ To factor)</div><p>Temperature: °F = °C × 9 ÷ 5 + 32, and K = °C + 273.15.</p>
-    <h2>Example</h2><p>5 km = <strong>3.1069 mi</strong>. 98.6 °F = <strong>37 °C</strong>.</p>
-    <h2>Tips</h2><ul><li>Use Swap to reverse the conversion.</li><li>Very small or large results are shown to 8 significant digits.</li><li>More unit types may be added later.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>How accurate is it?</summary><p>Conversion factors are exact international standards, shown rounded to 8 significant digits.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="date-diff.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-range"></i></div><h3>Days Between Dates</h3><p>Find the number of days between two dates.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="word-counter.html"><div class="ic" aria-hidden="true"><i data-icon="type"></i></div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+
+    <h2>How to Use the Unit Converter</h2>
+
+    <p>
+      Select a category such as length, weight or temperature. Enter the
+      number you want to convert, choose the original unit in the
+      <strong>From</strong> field and choose the destination unit in the
+      <strong>To</strong> field.
+    </p>
+
+    <p>
+      The result updates automatically as you enter or change the value.
+      You can also use the <strong>Swap units</strong> button to reverse
+      the conversion.
+    </p>
+
+    <h2>What Can You Convert?</h2>
+
+    <p>
+      This unit converter supports several common measurement categories
+      useful for students, everyday calculations and general reference.
+    </p>
+
+    <ul>
+      <li><strong>Length:</strong> convert units such as kilometers, miles and meters.</li>
+      <li><strong>Weight:</strong> convert common units such as kilograms and pounds.</li>
+      <li><strong>Temperature:</strong> convert between Celsius, Fahrenheit and other supported temperature units.</li>
+    </ul>
+
+    <h2>Unit Conversion Formula</h2>
+
+    <div class="formula">
+      Result = Value × (From factor ÷ To factor)
+    </div>
+
+    <p>
+      Length and weight conversions use standard conversion factors.
+      Temperature conversions use temperature-specific formulas.
+    </p>
+
+    <p>
+      For example:
+    </p>
+
+    <div class="formula">
+      °F = (°C × 9 ÷ 5) + 32
+    </div>
+
+    <p>
+      Another common temperature conversion is:
+    </p>
+
+    <div class="formula">
+      K = °C + 273.15
+    </div>
+
+    <h2>Unit Converter Examples</h2>
+
+    <p>
+      Some example conversions include:
+    </p>
+
+    <ul>
+      <li>5 km ≈ <strong>3.1069 miles</strong></li>
+      <li>1 kilogram ≈ <strong>2.20462 pounds</strong></li>
+      <li>98.6 °F = <strong>37 °C</strong></li>
+    </ul>
+
+    <h2>Why Use a Unit Converter?</h2>
+
+    <p>
+      Unit conversions are common in mathematics, science, engineering,
+      assignments and everyday situations. A converter can help you quickly
+      change a measurement into the unit required for a calculation or
+      comparison.
+    </p>
+
+    <h2>Tips for Accurate Unit Conversion</h2>
+
+    <ul>
+      <li>Choose the correct measurement category before converting.</li>
+      <li>Check both the From and To units carefully.</li>
+      <li>Use the Swap button when you need the reverse conversion.</li>
+      <li>Remember that displayed results may be rounded for readability.</li>
+      <li>For academic or scientific work, follow the units and precision required by your course or assignment.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What can I convert with this unit converter?</summary>
+      <p>
+        You can convert common units of length, weight and temperature,
+        including units such as kilometers, miles, meters, kilograms,
+        pounds, Celsius and Fahrenheit.
+      </p>
+    </details>
+
+    <details>
+      <summary>How does the unit converter work?</summary>
+      <p>
+        Choose a category, enter a value, select the unit you are converting
+        from and select the unit you are converting to. The converted result
+        is calculated in your browser.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I swap the units?</summary>
+      <p>
+        Yes. Use the Swap units button to reverse the From and To units and
+        perform the conversion in the opposite direction.
+      </p>
+    </details>
+
+    <details>
+      <summary>How accurate are the conversions?</summary>
+      <p>
+        The converter uses standard conversion factors and displays results
+        rounded for readability. The displayed result may therefore contain
+        fewer digits than the underlying calculation.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is my information saved?</summary>
+      <p>
+        No. The conversion is performed in your browser and the values you
+        enter are not sent to a server by the calculator.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="percentage.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="percent"></i>
+        </div>
+        <h3>Percentage Calculator</h3>
+        <p>
+          Calculate percentages, percentage shares and percentage increases
+          or decreases.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+      <a class="card" href="date-diff.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="calendar-range"></i>
+        </div>
+        <h3>Days Between Dates</h3>
+        <p>
+          Calculate the number of days, weeks, months and years between
+          two dates.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+      <a class="card" href="word-counter.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="type"></i>
+        </div>
+        <h3>Word Counter</h3>
+        <p>
+          Count words, characters, sentences and paragraphs and estimate
+          reading time.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
   </article>
+
 </main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+
         <!-- Add real social profile links here once the accounts exist. -->
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </nav>
+
   </div>
+
   <div class="container fbar">
-    <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p>
+      © 2026 Student Tools. All rights reserved.
+    </p>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/unit-converter.js"></script><script src="../js/main.js"></script>
+<script src="../js/unit-converter.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

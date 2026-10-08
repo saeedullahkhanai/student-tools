@@ -18,6 +18,65 @@
 <link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Semester GPA Calculator","url":"https://saeedullahkhanai.github.io/student-tools/tools/semester-gpa.html","description":"Add your courses, credits and letter grades to calculate your semester GPA on a 4.0 scale, with total credits and quality points.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Semester GPA Calculator","item":"https://saeedullahkhanai.github.io/student-tools/tools/semester-gpa.html"}]}</script>
+<script type="application/ld+json">
+... WebApplication ...
+</script>
+
+<script type="application/ld+json">
+... BreadcrumbList ...
+</script>
+
+<!-- FAQ Schema yahan paste karein -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a semester GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Semester GPA is the grade-point average earned from the courses you complete during one academic semester. Courses with more credit hours have a greater effect on the final GPA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is semester GPA calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply each course's credits by its grade points, add the quality points, and divide by the total number of credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator use a 4.0 scale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This calculator uses a common 4.0 letter-grade scale. Grading systems can differ between institutions, so check your university's official grade-point scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator save my information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation is performed in your browser and the information you enter is not sent to a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my CGPA from several semesters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the CGPA Calculator to combine GPA results from multiple semesters."
+      }
+    }
+  ]
+}
+</script>
+
+</head>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,17 +92,159 @@
 </header>
 <main id="main" class="container">
   <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Semester GPA Calculator</li></ol></nav>
-  <header class="tool-head"><h1>Semester GPA Calculator</h1><p>Add your courses, credits and grades to calculate your semester GPA on a 4.0 scale.</p></header>
+  <header class="tool-head"><h1>Semester GPA Calculator</h1><p>Use this free semester GPA calculator to calculate your GPA from course credits and letter grades on a 4.0 scale. Get your total credits, quality points, and semester GPA instantly.</p></header>
   <section class="calc" aria-label="Semester GPA calculator"><form class="card panel" data-calc="semester-gpa" novalidate><div class="rows" data-rows></div><button type="button" class="btn btn-ghost add" data-add><i data-icon="plus"></i> Add course</button><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section>
   <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
   <article class="content">
-    <h2>How it works</h2><p>Each course counts according to its credits. Multiply credits by the grade points, add everything up and divide by total credits.</p><p class="guide-link">Want a step-by-step explanation? Read <a href="../guides/calculate-gpa.html">How to Calculate GPA</a>.</p>
-    <h2>Formula</h2><div class="formula">GPA = Σ (Credits × Grade Points) ÷ Σ Credits</div>
-    <h2>Example</h2><p>3 credits of A (4.0), 4 credits of B (3.0) and 3 credits of A- (3.7): (12 + 12 + 11.1) ÷ 10 = <strong>3.51</strong>.</p>
-    <h2>Tips</h2><ul><li>Leave unused rows empty; they are ignored.</li><li>Grade points differ between institutions, so check your own scale.</li><li>Use the CGPA Calculator to combine several semesters.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>Does it work for a 10-point scale?</summary><p>This tool uses the common 4.0 letter-grade scale. For other scales, use the CGPA Calculator and enter your GPA values directly.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="cgpa.html"><div class="ic" aria-hidden="true"><i data-icon="bar-chart"></i></div><h3>CGPA Calculator</h3><p>Combine semester GPAs into one cumulative GPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="gpa-goal.html"><div class="ic" aria-hidden="true"><i data-icon="target"></i></div><h3>GPA Goal Calculator</h3><p>Find the GPA you need to reach your target CGPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="grade.html"><div class="ic" aria-hidden="true"><i data-icon="award"></i></div><h3>Grade Calculator</h3><p>Turn scores and weights into your overall grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
-  </article>
+  <h2>How to Calculate Semester GPA</h2>
+  <p>
+    Your semester GPA is based on the credits and grade points of each course.
+    To calculate it, multiply each course's credit hours by its grade points,
+    add the quality points together, and divide the total by the number of credits.
+  </p>
+
+  <p class="guide-link">
+    Want a step-by-step explanation?
+    Read <a href="../guides/calculate-gpa.html">How to Calculate GPA</a>.
+  </p>
+
+  <h2>Semester GPA Formula</h2>
+  <div class="formula">
+    GPA = Σ (Credits × Grade Points) ÷ Σ Credits
+  </div>
+
+  <p>
+    In this formula, credits are the credit hours for each course and grade
+    points are the numerical values assigned to your letter grades.
+  </p>
+
+  <h2>Semester GPA Example</h2>
+  <p>
+    Suppose you have three courses:
+  </p>
+
+  <ul>
+    <li>3 credits with an A grade (4.0 grade points)</li>
+    <li>4 credits with a B grade (3.0 grade points)</li>
+    <li>3 credits with an A- grade (3.7 grade points)</li>
+  </ul>
+
+  <p>
+    Quality points:
+    (3 × 4.0) + (4 × 3.0) + (3 × 3.7)
+    = 12 + 12 + 11.1 = 35.1
+  </p>
+
+  <p>
+    Total credits = 3 + 4 + 3 = 10
+  </p>
+
+  <p>
+    Semester GPA = 35.1 ÷ 10 = <strong>3.51</strong>
+  </p>
+
+  <h2>What Is a 4.0 GPA Scale?</h2>
+  <p>
+    A 4.0 GPA scale assigns numerical grade points to letter grades. For
+    example, an A may be worth 4.0 points, while lower letter grades have
+    lower grade-point values. The exact grading scale can vary between
+    universities, so always check your institution's official grading policy.
+  </p>
+
+  <h2>Tips for Calculating Your GPA</h2>
+  <ul>
+    <li>Enter the correct credit hours for every course.</li>
+    <li>Use the grade-point scale provided by your university.</li>
+    <li>Leave unused course rows empty; they are ignored.</li>
+    <li>Check your final result against your university's GPA policy.</li>
+    <li>Use the CGPA Calculator to combine GPA results from multiple semesters.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>What is a semester GPA?</summary>
+    <p>
+      Semester GPA is the grade-point average earned from the courses you
+      complete during one academic semester. Courses with more credit hours
+      have a greater effect on the final GPA.
+    </p>
+  </details>
+
+  <details>
+    <summary>How is semester GPA calculated?</summary>
+    <p>
+      Multiply each course's credits by its grade points, add the quality
+      points, and divide by the total number of credits.
+    </p>
+  </details>
+
+  <details>
+    <summary>Does this calculator use a 4.0 scale?</summary>
+    <p>
+      Yes. This calculator uses a common 4.0 letter-grade scale. Grading
+      systems can differ between institutions, so check your university's
+      official grade-point scale.
+    </p>
+  </details>
+
+  <details>
+    <summary>Does the calculator save my information?</summary>
+    <p>
+      No. The calculation is performed in your browser and the information
+      you enter is not sent to a server.
+    </p>
+  </details>
+
+  <details>
+    <summary>Can I calculate my CGPA from several semesters?</summary>
+    <p>
+      Yes. Use the <a href="cgpa.html">CGPA Calculator</a> to combine GPA
+      results from multiple semesters.
+    </p>
+  </details>
+
+  <h2>Related Student Tools</h2>
+
+  <div class="grid related">
+    <a class="card" href="cgpa.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="bar-chart"></i>
+      </div>
+      <h3>CGPA Calculator</h3>
+      <p>Combine semester GPAs into one cumulative GPA.</p>
+      <span class="mini-btn">
+        Use Tool<i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="gpa-goal.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="target"></i>
+      </div>
+      <h3>GPA Goal Calculator</h3>
+      <p>Find the GPA you need to reach your target CGPA.</p>
+      <span class="mini-btn">
+        Use Tool<i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="grade.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="award"></i>
+      </div>
+      <h3>Grade Calculator</h3>
+      <p>Turn scores and weights into your overall grade.</p>
+      <span class="mini-btn">
+        Use Tool<i data-icon="arrow-right"></i>
+      </span>
+    </a>
+  </div>
+
+  <p>
+    <a href="index.html">Browse all student tools</a>
+  </p>
+</article>
 </main>
 <footer class="footer">
   <div class="container fgrid">

@@ -3,70 +3,617 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Days Between Dates Calculator - Date Difference</title>
-<meta name="description" content="Count the days, weeks, months and years between two dates. Handy for deadlines, exam countdowns and planning your study schedule.">
+
+<title>Days Between Dates Calculator - Calculate Date Difference</title>
+<meta name="description" content="Free date difference calculator to calculate the number of days, weeks, months and years between two dates. Useful for deadlines, exams and study planning.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/date-diff.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="Days Between Dates Calculator - Date Difference">
-<meta property="og:description" content="Count the days, weeks, months and years between two dates. Handy for deadlines, exam countdowns and planning your study schedule.">
+<meta property="og:title" content="Days Between Dates Calculator - Calculate Date Difference">
+<meta property="og:description" content="Free date difference calculator to calculate the number of days, weeks, months and years between two dates. Useful for deadlines, exams and study planning.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/date-diff.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Days Between Dates","url":"https://saeedullahkhanai.github.io/student-tools/tools/date-diff.html","description":"Count the days, weeks, months and years between two dates. Handy for deadlines, exam countdowns and planning your study schedule.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Days Between Dates","item":"https://saeedullahkhanai.github.io/student-tools/tools/date-diff.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Days Between Dates Calculator",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/date-diff.html",
+  "description": "Free date difference calculator to calculate the number of days, weeks, months and years between two dates.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Days Between Dates",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/date-diff.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate the number of days between two dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The number of days between two dates is calculated by subtracting the earlier date from the later date. The result represents the full calendar days between the dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the date calculator count weekends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculator counts every calendar day, including Saturdays and Sundays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the end date included in the calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The standard result counts the full days between the two dates and does not include the end date as an additional day. If you want both dates included, add one day to the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I enter the dates in reverse order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator handles the dates in either order and calculates the difference between them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the date calculator save my information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation is performed in your browser and the dates you enter are not sent to a server."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Days Between Dates</li></ol></nav>
-  <header class="tool-head"><h1>Days Between Dates</h1><p>Find the number of days, weeks, months and years between two dates.</p></header>
-  <section class="calc" aria-label="Days between dates calculator"><form class="card panel" data-calc="date-diff" novalidate><div class="field"><label for="start">Start Date</label><input id="start" name="start" type="date" placeholder="" data-label="a start date"  aria-describedby="start-err"><p class="err" id="start-err" role="alert"></p></div><div class="field"><label for="end">End Date</label><input id="end" name="end" type="date" placeholder="" data-label="an end date"  aria-describedby="end-err"><p class="err" id="end-err" role="alert"></p></div><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
-  <article class="content">
-    <h2>How it works</h2><p>Pick two dates. The tool counts the full days between them and also gives weeks and a years-months-days breakdown. Useful for deadlines and exam countdowns.</p>
-    <h2>Formula</h2><div class="formula">Days = (End Date − Start Date) in days</div>
-    <h2>Example</h2><p>1 January 2026 to 1 March 2026 = <strong>59 days</strong>, which is 8 weeks 3 days, or 2 months.</p>
-    <h2>Tips</h2><ul><li>The end date itself is not counted; add 1 if you want both dates included.</li><li>If you enter the dates in reverse order they are swapped for you.</li><li>Dates are handled in UTC, so daylight saving does not affect results.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>Does it count weekends?</summary><p>Yes. It counts every calendar day.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="attendance.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-check"></i></div><h3>Attendance Calculator</h3><p>Check your attendance and how many classes you can miss.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="unit-converter.html"><div class="ic" aria-hidden="true"><i data-icon="arrow-left-right"></i></div><h3>Unit Converter</h3><p>Convert length, weight and temperature.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
-  </article>
-</main>
-<footer class="footer">
-  <div class="container fgrid">
-    <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
-      <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a href="index.html">Tools</a>
+      </li>
+      <li aria-current="page">Days Between Dates</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+
+    <h1>Days Between Dates Calculator</h1>
+
+    <p>
+      Use this free date difference calculator to find the number of days,
+      weeks, months and years between two dates. It is useful for deadlines,
+      exam dates, study planning and important events.
+    </p>
+
+  </header>
+
+  <section class="calc" aria-label="Days between dates calculator">
+
+    <form class="card panel" data-calc="date-diff" novalidate>
+
+      <div class="field">
+
+        <label for="start">Start Date</label>
+
+        <input
+          id="start"
+          name="start"
+          type="date"
+          placeholder=""
+          data-label="a start date"
+          aria-describedby="start-err">
+
+        <p class="err" id="start-err" role="alert"></p>
+
       </div>
+
+      <div class="field">
+
+        <label for="end">End Date</label>
+
+        <input
+          id="end"
+          name="end"
+          type="date"
+          placeholder=""
+          data-label="an end date"
+          aria-describedby="end-err">
+
+        <p class="err" id="end-err" role="alert"></p>
+
+      </div>
+
+      <p class="err form-err" role="alert"></p>
+
+      <div class="btns">
+
+        <button type="submit" class="btn btn-primary">
+          Calculate
+        </button>
+
+        <button type="button" class="btn btn-ghost" data-reset>
+          Reset
+        </button>
+
+      </div>
+
+    </form>
+
+    <section class="card panel result-panel" aria-live="polite">
+
+      <h2 class="res-title">Result</h2>
+
+      <p class="empty">
+        Enter two dates and press <strong>Calculate</strong>.
+        Your date difference will appear here.
+      </p>
+
+      <div class="out" hidden></div>
+
+    </section>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
+  </div>
+
+  <article class="content">
+
+    <h2>How to Calculate the Difference Between Two Dates</h2>
+
+    <p>
+      To calculate the difference between two dates, select a start date and
+      an end date. The calculator determines the number of full calendar days
+      between them and also provides the difference in weeks, months and years
+      where applicable.
+    </p>
+
+    <p>
+      This tool can be useful for students who want to calculate the time
+      remaining before an exam, assignment deadline, semester date or other
+      important academic event.
+    </p>
+
+    <h2>Date Difference Formula</h2>
+
+    <div class="formula">
+      Days = End Date − Start Date
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <p>
+      The calculation is based on the difference between the two calendar
+      dates. The standard result does not count the end date as an additional
+      day.
+    </p>
+
+    <h2>Days Between Dates Example</h2>
+
+    <p>
+      Suppose the start date is <strong>January 1, 2026</strong> and the end
+      date is <strong>March 1, 2026</strong>.
+    </p>
+
+    <p>
+      The difference is <strong>59 days</strong>, which is also
+      <strong>8 weeks and 3 days</strong>.
+    </p>
+
+    <p>
+      The calendar-month difference is approximately
+      <strong>2 months</strong>.
+    </p>
+
+    <h2>Does the Calculator Count Weekends?</h2>
+
+    <p>
+      Yes. This calculator counts every calendar day between the selected
+      dates, including Saturdays and Sundays.
+    </p>
+
+    <p>
+      If you need to calculate only working days or business days, you would
+      need a business-day calculator that excludes weekends and possibly
+      holidays.
+    </p>
+
+    <h2>Is the End Date Included?</h2>
+
+    <p>
+      The standard calculation gives the number of full days between the
+      start and end dates. The end date is not counted as an additional day.
+    </p>
+
+    <p>
+      For example, from January 1 to January 2 is 1 day. If you want to count
+      both January 1 and January 2 as included days, the inclusive result
+      would be 2 days.
+    </p>
+
+    <h2>What If the Dates Are in Reverse Order?</h2>
+
+    <p>
+      You can enter the dates in either order. If the end date comes before
+      the start date, the calculator handles the date difference accordingly.
+    </p>
+
+    <h2>Tips for Using a Date Difference Calculator</h2>
+
+    <ul>
+      <li>Check that you selected the correct start and end dates.</li>
+      <li>Use the calculator to plan assignment and exam deadlines.</li>
+      <li>Remember that the standard result does not add the end date.</li>
+      <li>Weekend days are included in the calendar-day calculation.</li>
+      <li>For official deadlines, always confirm the date with your school or institution.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How do you calculate the number of days between two dates?</summary>
+
+      <p>
+        The number of days is calculated by subtracting the earlier date from
+        the later date. The result represents the full calendar days between
+        the two dates.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the date calculator count weekends?</summary>
+
+      <p>
+        Yes. The calculator counts every calendar day, including Saturdays
+        and Sundays.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is the end date included?</summary>
+
+      <p>
+        The standard result does not include the end date as an additional
+        day. If you want both dates included, add one day to the result.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I enter dates in reverse order?</summary>
+
+      <p>
+        Yes. The calculator can handle the dates in either order and
+        calculates the difference between them.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the calculator account for leap years?</summary>
+
+      <p>
+        Yes. Calendar date calculations account for the actual dates in the
+        selected years, including leap-year dates.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the date calculator save my information?</summary>
+
+      <p>
+        No. The calculation is performed in your browser and the dates you
+        enter are not sent to a server.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="attendance.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="calendar-check"></i>
+        </div>
+
+        <h3>Attendance Calculator</h3>
+
+        <p>
+          Calculate your current attendance and find how many classes you can
+          miss or need to attend.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="percentage.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="percent"></i>
+        </div>
+
+        <h3>Percentage Calculator</h3>
+
+        <p>
+          Calculate percentages, percentage changes and shares quickly.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="unit-converter.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="arrow-left-right"></i>
+        </div>
+
+        <h3>Unit Converter</h3>
+
+        <p>
+          Convert common units such as length, weight and temperature.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container fgrid">
+
+    <div class="fbrand">
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
+      <div class="social">
+
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+
+        <!-- Add real social profile links here once the accounts exist. -->
+
+      </div>
+
+    </div>
+
+    <nav aria-label="Popular tools">
+
+      <p class="ft">Popular tools</p>
+
+      <a href="../tools/attendance.html">
+        Attendance Calculator
+      </a>
+
+      <a href="../tools/semester-gpa.html">
+        Semester GPA Calculator
+      </a>
+
+      <a href="../tools/cgpa.html">
+        CGPA Calculator
+      </a>
+
+      <a href="../tools/scientific.html">
+        Scientific Calculator
+      </a>
+
+      <a href="../tools/percentage.html">
+        Percentage Calculator
+      </a>
+
+    </nav>
+
+    <nav aria-label="Resources">
+
+      <p class="ft">Resources</p>
+
+      <a href="../tools/index.html">
+        All Tools
+      </a>
+
+      <a href="../guides/index.html">
+        Guides
+      </a>
+
+      <a href="../index.html#faqH">
+        FAQ
+      </a>
+
+      <a href="../about.html">
+        About
+      </a>
+
+      <a href="../contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+    <nav aria-label="Legal">
+
+      <p class="ft">Legal</p>
+
+      <a href="../privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="../terms.html">
+        Terms of Use
+      </a>
+
+      <a href="../disclaimer.html">
+        Disclaimer
+      </a>
+
+    </nav>
+
   </div>
+
   <div class="container fbar">
-    <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p>
+      © 2026 Student Tools. All rights reserved.
+    </p>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/calculators.js"></script><script src="../js/calc-core.js"></script><script src="../js/main.js"></script>
+<script src="../js/calculators.js"></script>
+<script src="../js/calc-core.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

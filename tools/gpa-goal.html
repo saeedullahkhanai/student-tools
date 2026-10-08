@@ -3,70 +3,661 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GPA Goal Calculator - Calculate Your Target GPA</title>
-<meta name="description" content="Find the GPA you need next semester to reach your target CGPA. Enter your current CGPA, credits completed and credits this semester.">
+
+<title>GPA Goal Calculator - Calculate Required GPA</title>
+
+<meta name="description" content="Free GPA goal calculator to find the GPA you need to reach your target CGPA. Enter your current CGPA, completed credits, target CGPA and upcoming credits.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/gpa-goal.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="GPA Goal Calculator - Calculate Your Target GPA">
-<meta property="og:description" content="Find the GPA you need next semester to reach your target CGPA. Enter your current CGPA, credits completed and credits this semester.">
+<meta property="og:title" content="GPA Goal Calculator - Calculate Required GPA">
+<meta property="og:description" content="Free GPA goal calculator to find the GPA you need to reach your target CGPA using your current CGPA, completed credits and upcoming credits.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/gpa-goal.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"GPA Goal Calculator","url":"https://saeedullahkhanai.github.io/student-tools/tools/gpa-goal.html","description":"Find the GPA you need next semester to reach your target CGPA. Enter your current CGPA, credits completed and credits this semester.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"GPA Goal Calculator","item":"https://saeedullahkhanai.github.io/student-tools/tools/gpa-goal.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GPA Goal Calculator",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/gpa-goal.html",
+  "description": "Free GPA goal calculator to find the GPA required to reach a target cumulative GPA.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "GPA Goal Calculator",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/gpa-goal.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the GPA Goal Calculator work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator uses your current CGPA, completed credits, target CGPA and upcoming credits to calculate the GPA you need to earn in your upcoming credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What GPA do I need to reach my target CGPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your current CGPA, completed credits, target CGPA and credits for your next semester. The calculator will determine the required GPA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my required GPA higher than the maximum GPA scale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the required GPA is higher than the maximum GPA available on your grading scale, the target cannot be reached in the specified number of credits. Try spreading the target across more semesters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the GPA Goal Calculator save my information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation is performed in your browser and the information you enter is not sent to a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a 5.0 or 10.0 GPA scale?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can enter the maximum GPA scale used by your institution, such as 4, 5 or 10."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
+
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">GPA Goal Calculator</li></ol></nav>
-  <header class="tool-head"><h1>GPA Goal Calculator</h1><p>Find the GPA you need to earn in your next semester to reach your target cumulative GPA.</p></header>
-  <section class="calc" aria-label="GPA goal calculator"><form class="card panel" data-calc="gpa-goal" novalidate><div class="field"><label for="current">Current CGPA</label><input id="current" name="current" type="number" inputmode="decimal" step="any" min="0" placeholder="3.20" data-label="your current CGPA"  aria-describedby="current-err"><p class="err" id="current-err" role="alert"></p></div><div class="field"><label for="credits">Credits Completed</label><input id="credits" name="credits" type="number" inputmode="decimal" step="any" min="0" placeholder="60" data-label="the credits you have completed"  aria-describedby="credits-err"><p class="err" id="credits-err" role="alert"></p></div><div class="field"><label for="target">Target CGPA</label><input id="target" name="target" type="number" inputmode="decimal" step="any" min="0" placeholder="3.30" data-label="your target CGPA"  aria-describedby="target-err"><p class="err" id="target-err" role="alert"></p></div><div class="field"><label for="next">Credits This Semester</label><input id="next" name="next" type="number" inputmode="decimal" step="any" min="0" placeholder="15" data-label="the credits for this semester" data-positive aria-describedby="next-err"><p class="err" id="next-err" role="alert"></p></div><div class="field"><label for="scale">Maximum GPA Scale</label><input id="scale" name="scale" type="number" inputmode="decimal" step="any" min="0" value="4" placeholder="4" data-label="the maximum GPA scale" data-positive aria-describedby="scale-hint scale-err"><p class="err" id="scale-err" role="alert"></p><p class="hint" id="scale-hint">Usually 4.0. Use 5 or 10 if your institution does.</p></div><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Tools</a></li>
+      <li aria-current="page">GPA Goal Calculator</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+
+    <h1>GPA Goal Calculator</h1>
+
+    <p>
+      Use this free GPA goal calculator to find the GPA you need in your
+      upcoming semester to reach your target cumulative GPA. Enter your
+      current CGPA, completed credits, target CGPA and upcoming credits.
+    </p>
+
+  </header>
+
+  <section class="calc" aria-label="GPA goal calculator">
+
+    <form
+      class="card panel"
+      data-calc="gpa-goal"
+      novalidate>
+
+      <div class="field">
+        <label for="current">Current CGPA</label>
+
+        <input
+          id="current"
+          name="current"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          placeholder="3.20"
+          data-label="your current CGPA"
+          aria-describedby="current-err">
+
+        <p class="err" id="current-err" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="credits">Credits Completed</label>
+
+        <input
+          id="credits"
+          name="credits"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          placeholder="60"
+          data-label="the credits you have completed"
+          aria-describedby="credits-err">
+
+        <p class="err" id="credits-err" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="target">Target CGPA</label>
+
+        <input
+          id="target"
+          name="target"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          placeholder="3.30"
+          data-label="your target CGPA"
+          aria-describedby="target-err">
+
+        <p class="err" id="target-err" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="next">Credits This Semester</label>
+
+        <input
+          id="next"
+          name="next"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          placeholder="15"
+          data-label="the credits for this semester"
+          data-positive
+          aria-describedby="next-err">
+
+        <p class="err" id="next-err" role="alert"></p>
+      </div>
+
+      <div class="field">
+
+        <label for="scale">Maximum GPA Scale</label>
+
+        <input
+          id="scale"
+          name="scale"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          value="4"
+          placeholder="4"
+          data-label="the maximum GPA scale"
+          data-positive
+          aria-describedby="scale-hint scale-err">
+
+        <p class="err" id="scale-err" role="alert"></p>
+
+        <p class="hint" id="scale-hint">
+          Usually 4.0. Use 5 or 10 if your institution does.
+        </p>
+
+      </div>
+
+      <p class="err form-err" role="alert"></p>
+
+      <div class="btns">
+        <button type="submit" class="btn btn-primary">
+          Calculate
+        </button>
+
+        <button type="button" class="btn btn-ghost" data-reset>
+          Reset
+        </button>
+      </div>
+
+    </form>
+
+    <section
+      class="card panel result-panel"
+      aria-live="polite">
+
+      <h2 class="res-title">Result</h2>
+
+      <p class="empty">
+        Enter your numbers and press <strong>Calculate</strong>.
+        Your result will appear here.
+      </p>
+
+      <div class="out" hidden></div>
+
+    </section>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
+  </div>
+
   <article class="content">
-    <h2>How it works</h2><p>Your CGPA is a credit-weighted average. Enter what you have so far, your target, and the credits you will take next. The calculator works out the average GPA you must earn in the coming credits.</p><p class="guide-link">Want a step-by-step explanation? Read <a href="../guides/calculate-cgpa.html">How to Calculate CGPA</a>.</p>
-    <h2>Formula</h2><div class="formula">Required GPA = (Target × (Completed + Next) − Current × Completed) ÷ Next</div>
-    <h2>Example</h2><p>Current CGPA 3.2 over 60 credits, target 3.3, next semester 15 credits: (3.3 × 75 − 3.2 × 60) ÷ 15 = <strong>3.70</strong>. You need a 3.70 GPA this semester.</p>
-    <h2>Tips</h2><ul><li>If the result is above the maximum scale, spread the goal across two or more semesters.</li><li>Higher credit courses move your CGPA more, so prioritise them.</li><li>Check whether repeated courses replace old grades at your institution.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>Why is it "Not possible"?</summary><p>The GPA you would need is higher than the maximum on your scale. Try a lower target or a longer timeline.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="cgpa.html"><div class="ic" aria-hidden="true"><i data-icon="bar-chart"></i></div><h3>CGPA Calculator</h3><p>Combine semester GPAs into one cumulative GPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="semester-gpa.html"><div class="ic" aria-hidden="true"><i data-icon="graduation-cap"></i></div><h3>Semester GPA Calculator</h3><p>Calculate your GPA for the semester.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="final-exam.html"><div class="ic" aria-hidden="true"><i data-icon="clipboard-check"></i></div><h3>Final Exam Required Marks</h3><p>See what you need in the final exam to hit a grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+
+    <h2>How to Calculate Your Required GPA</h2>
+
+    <p>
+      Your cumulative GPA is a credit-weighted average. To find the GPA you
+      need to reach a target CGPA, enter your current CGPA, the credits you
+      have already completed, your target CGPA, and the credits you plan to
+      complete next.
+    </p>
+
+    <p class="guide-link">
+      Want a step-by-step explanation?
+      Read
+      <a href="../guides/calculate-cgpa.html">
+        How to Calculate CGPA
+      </a>.
+    </p>
+
+    <h2>Required GPA Formula</h2>
+
+    <div class="formula">
+      Required GPA =
+      (Target CGPA × (Completed Credits + Next Credits)
+      − Current CGPA × Completed Credits)
+      ÷ Next Credits
+    </div>
+
+    <p>
+      The formula calculates the average GPA you must earn during your
+      upcoming credits to reach the target CGPA.
+    </p>
+
+    <h2>GPA Goal Calculator Example</h2>
+
+    <p>
+      Suppose your current CGPA is <strong>3.20</strong> after completing
+      <strong>60 credits</strong>. Your target CGPA is
+      <strong>3.30</strong>, and you will complete
+      <strong>15 credits</strong> next semester.
+    </p>
+
+    <p>
+      Required GPA =
+      (3.30 × 75 − 3.20 × 60) ÷ 15
+    </p>
+
+    <p>
+      Required GPA = <strong>3.70</strong>
+    </p>
+
+    <p>
+      This means you would need approximately a
+      <strong>3.70 GPA</strong> over those 15 credits to reach a 3.30 CGPA,
+      assuming a credit-weighted calculation.
+    </p>
+
+    <h2>What If the Required GPA Is Too High?</h2>
+
+    <p>
+      Sometimes the calculator may show that the required GPA is higher than
+      the maximum GPA available on your grading scale. This means the target
+      cannot be reached within the specified number of credits.
+    </p>
+
+    <p>
+      In that situation, you can try spreading your goal across two or more
+      semesters. Completing more credits gives your CGPA more opportunities
+      to move toward the target.
+    </p>
+
+    <h2>Tips for Reaching Your GPA Goal</h2>
+
+    <ul>
+      <li>
+        Set a realistic target based on your current CGPA and remaining
+        semesters.
+      </li>
+
+      <li>
+        Focus on courses with more credit hours because they have a larger
+        effect on your credit-weighted GPA.
+      </li>
+
+      <li>
+        Check your university's official GPA and CGPA calculation policy.
+      </li>
+
+      <li>
+        Check whether repeated courses replace previous grades or are
+        calculated differently at your institution.
+      </li>
+
+      <li>
+        If your required GPA is above the maximum scale, spread your target
+        across multiple semesters.
+      </li>
+    </ul>
+
+    <h2>GPA Goal Calculator FAQs</h2>
+
+    <details>
+      <summary>How does the GPA Goal Calculator work?</summary>
+
+      <p>
+        The calculator uses your current CGPA, completed credits, target CGPA
+        and upcoming credits to calculate the GPA you need to earn in your
+        upcoming credits.
+      </p>
+    </details>
+
+    <details>
+      <summary>What GPA do I need to reach my target CGPA?</summary>
+
+      <p>
+        Enter your current CGPA, completed credits, target CGPA and credits
+        for your next semester. The calculator will determine the required
+        GPA.
+      </p>
+    </details>
+
+    <details>
+      <summary>
+        Why is my required GPA higher than the maximum GPA scale?
+      </summary>
+
+      <p>
+        If the required GPA is higher than the maximum GPA available on your
+        grading scale, the target cannot be reached in the specified number
+        of credits. Try spreading the target across more semesters.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the GPA Goal Calculator save my information?</summary>
+
+      <p>
+        No. The calculation is performed in your browser and the information
+        you enter is not sent to a server.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I use a 5.0 or 10.0 GPA scale?</summary>
+
+      <p>
+        Yes. You can enter the maximum GPA scale used by your institution,
+        such as 4, 5 or 10.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="cgpa.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="bar-chart"></i>
+        </div>
+
+        <h3>CGPA Calculator</h3>
+
+        <p>
+          Combine semester GPAs and credits to calculate your cumulative GPA.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="semester-gpa.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </div>
+
+        <h3>Semester GPA Calculator</h3>
+
+        <p>
+          Calculate your semester GPA using course credits and letter grades.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="final-exam.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="clipboard-check"></i>
+        </div>
+
+        <h3>Final Exam Required Marks</h3>
+
+        <p>
+          Find the marks you need in your final exam to reach your target
+          grade.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
   </article>
+
 </main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+
         <!-- Add real social profile links here once the accounts exist. -->
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+
+      <p class="ft">Popular tools</p>
+
+      <a href="../tools/attendance.html">
+        Attendance Calculator
+      </a>
+
+      <a href="../tools/semester-gpa.html">
+        Semester GPA Calculator
+      </a>
+
+      <a href="../tools/cgpa.html">
+        CGPA Calculator
+      </a>
+
+      <a href="../tools/scientific.html">
+        Scientific Calculator
+      </a>
+
+      <a href="../tools/percentage.html">
+        Percentage Calculator
+      </a>
+
+    </nav>
+
+    <nav aria-label="Resources">
+
+      <p class="ft">Resources</p>
+
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+
+    </nav>
+
+    <nav aria-label="Legal">
+
+      <p class="ft">Legal</p>
+
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+
+    </nav>
+
   </div>
+
   <div class="container fbar">
-    <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p>
+      © 2026 Student Tools. All rights reserved.
+    </p>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/calculators.js"></script><script src="../js/calc-core.js"></script><script src="../js/main.js"></script>
+<script src="../js/calculators.js"></script>
+<script src="../js/calc-core.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

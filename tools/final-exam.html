@@ -3,70 +3,669 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Final Exam Calculator - Marks Needed for Your Target</title>
-<meta name="description" content="Find the marks you need in your final exam to reach your target grade, based on your current grade and the weight of the exam.">
+
+<title>Final Exam Calculator - Calculate Required Marks</title>
+<meta name="description" content="Free final exam calculator to find the marks you need to reach your target overall grade. Enter your current grade, exam weight and target grade.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/final-exam.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="Final Exam Calculator - Marks Needed for Your Target">
-<meta property="og:description" content="Find the marks you need in your final exam to reach your target grade, based on your current grade and the weight of the exam.">
+<meta property="og:title" content="Final Exam Calculator - Calculate Required Marks">
+<meta property="og:description" content="Free final exam calculator to find the marks you need to reach your target overall grade. Enter your current grade, exam weight and target grade.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/final-exam.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Final Exam Required Marks","url":"https://saeedullahkhanai.github.io/student-tools/tools/final-exam.html","description":"Find the marks you need in your final exam to reach your target grade, based on your current grade and the weight of the exam.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Final Exam Required Marks","item":"https://saeedullahkhanai.github.io/student-tools/tools/final-exam.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Final Exam Required Marks Calculator",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/final-exam.html",
+  "description": "Free final exam calculator to find the marks needed to reach a target overall grade based on current grade and final exam weight.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Final Exam Required Marks",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/final-exam.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the marks needed in my final exam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your current grade, the percentage weight of the final exam, and your target overall grade. The calculator determines the final exam percentage required to reach your target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I enter as my grade so far?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the percentage you have earned from all assessments completed before the final exam. It should represent your current average based on the completed coursework."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the required final exam mark is above 100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A required mark above 100% means the target grade cannot be reached through the final exam alone under the entered grading weights. Check your course policy for extra credit, additional assessments or other options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my pass mark as the target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter your course pass percentage as the target overall grade to estimate the minimum final exam score needed to pass."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Final Exam Calculator save my information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation is performed in your browser and the information you enter is not sent to a server."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Final Exam Required Marks</li></ol></nav>
-  <header class="tool-head"><h1>Final Exam Required Marks</h1><p>Find out how many marks you need in your final exam to reach the grade you want.</p></header>
-  <section class="calc" aria-label="Final exam required marks calculator"><form class="card panel" data-calc="final-exam" novalidate><div class="field"><label for="current">Grade So Far (%)</label><input id="current" name="current" type="number" inputmode="decimal" step="any" min="0" max="100" placeholder="70" data-label="your grade so far"  aria-describedby="current-hint current-err"><p class="err" id="current-err" role="alert"></p><p class="hint" id="current-hint">Your average on everything except the final exam.</p></div><div class="field"><label for="weight">Final Exam Weight (%)</label><input id="weight" name="weight" type="number" inputmode="decimal" step="any" min="0" max="100" placeholder="40" data-label="the final exam weight" data-positive aria-describedby="weight-err"><p class="err" id="weight-err" role="alert"></p></div><div class="field"><label for="target">Target Overall Grade (%)</label><input id="target" name="target" type="number" inputmode="decimal" step="any" min="0" max="100" placeholder="80" data-label="your target grade"  aria-describedby="target-err"><p class="err" id="target-err" role="alert"></p></div><p class="err form-err" role="alert"></p><div class="btns"><button type="submit" class="btn btn-primary">Calculate</button><button type="button" class="btn btn-ghost" data-reset>Reset</button></div></form><section class="card panel result-panel" aria-live="polite"><h2 class="res-title">Result</h2><p class="empty">Enter your numbers and press <strong>Calculate</strong>. Your result will appear here.</p><div class="out" hidden></div></section></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
-  <article class="content">
-    <h2>How it works</h2><p>Your final grade is the coursework (worth the remaining weight) plus the final exam. Enter your grade so far, how much the final is worth and the overall grade you want.</p><p class="guide-link">Want a step-by-step explanation? Read <a href="../guides/final-exam-marks.html">How Many Marks Do I Need in My Final Exam?</a>.</p>
-    <h2>Formula</h2><div class="formula">Required % = (Target − Current × (100 − Weight) ÷ 100) ÷ (Weight ÷ 100)</div>
-    <h2>Example</h2><p>Grade so far 70%, final worth 40%, target 80%: (80 − 70 × 0.6) ÷ 0.4 = <strong>95%</strong>. For a target of 60% you would need only 45%.</p>
-    <h2>Tips</h2><ul><li>Use your pass mark as the target to see the minimum score you need.</li><li>Ask your teacher if the final has a minimum pass requirement of its own.</li><li>If the result is above 100%, ask about extra credit or re-weighting.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>What should I enter as "grade so far"?</summary><p>The percentage you have earned on all assessments except the final exam, based on their own weights.</p></details><details><summary>Is my data saved?</summary><p>No. Everything is calculated in your browser and nothing you enter is sent to a server.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="grade.html"><div class="ic" aria-hidden="true"><i data-icon="award"></i></div><h3>Grade Calculator</h3><p>Turn scores and weights into your overall grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="gpa-goal.html"><div class="ic" aria-hidden="true"><i data-icon="target"></i></div><h3>GPA Goal Calculator</h3><p>Find the GPA you need to reach your target CGPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
-  </article>
-</main>
-<footer class="footer">
-  <div class="container fgrid">
-    <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
-      <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li>
+        <a href="../index.html">Home</a>
+      </li>
+      <li>
+        <a href="index.html">Tools</a>
+      </li>
+      <li aria-current="page">Final Exam Required Marks</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+
+    <h1>Final Exam Calculator</h1>
+
+    <p>
+      Use this free final exam calculator to find the marks you need on your
+      final exam to reach your target overall grade. Enter your current grade,
+      final exam weight and target grade to calculate the required exam score.
+    </p>
+
+  </header>
+
+  <section class="calc" aria-label="Final exam required marks calculator">
+
+    <form class="card panel" data-calc="final-exam" novalidate>
+
+      <div class="field">
+
+        <label for="current">Grade So Far (%)</label>
+
+        <input
+          id="current"
+          name="current"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          max="100"
+          placeholder="70"
+          data-label="your grade so far"
+          aria-describedby="current-hint current-err">
+
+        <p class="err" id="current-err" role="alert"></p>
+
+        <p class="hint" id="current-hint">
+          Your average on everything completed before the final exam.
+        </p>
+
       </div>
+
+      <div class="field">
+
+        <label for="weight">Final Exam Weight (%)</label>
+
+        <input
+          id="weight"
+          name="weight"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          max="100"
+          placeholder="40"
+          data-label="the final exam weight"
+          data-positive
+          aria-describedby="weight-err">
+
+        <p class="err" id="weight-err" role="alert"></p>
+
+      </div>
+
+      <div class="field">
+
+        <label for="target">Target Overall Grade (%)</label>
+
+        <input
+          id="target"
+          name="target"
+          type="number"
+          inputmode="decimal"
+          step="any"
+          min="0"
+          max="100"
+          placeholder="80"
+          data-label="your target grade"
+          aria-describedby="target-err">
+
+        <p class="err" id="target-err" role="alert"></p>
+
+      </div>
+
+      <p class="err form-err" role="alert"></p>
+
+      <div class="btns">
+
+        <button type="submit" class="btn btn-primary">
+          Calculate
+        </button>
+
+        <button type="button" class="btn btn-ghost" data-reset>
+          Reset
+        </button>
+
+      </div>
+
+    </form>
+
+    <section class="card panel result-panel" aria-live="polite">
+
+      <h2 class="res-title">Result</h2>
+
+      <p class="empty">
+        Enter your numbers and press <strong>Calculate</strong>.
+        Your required final exam mark will appear here.
+      </p>
+
+      <div class="out" hidden></div>
+
+    </section>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
+  </div>
+
+  <article class="content">
+
+    <h2>How to Calculate the Marks Needed in Your Final Exam</h2>
+
+    <p>
+      Your final course grade is based on the work you have already completed
+      and the marks you earn in the final exam. The final exam calculator
+      helps you determine the exam percentage required to reach a specific
+      target grade.
+    </p>
+
+    <p class="guide-link">
+      Want a step-by-step explanation?
+      Read
+      <a href="../guides/final-exam-marks.html">
+        How Many Marks Do I Need in My Final Exam?
+      </a>.
+    </p>
+
+    <h2>Final Exam Required Marks Formula</h2>
+
+    <div class="formula">
+      Required % =
+      (Target − Current × (100 − Weight) ÷ 100)
+      ÷ (Weight ÷ 100)
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <p>
+      The formula uses your current grade, the percentage weight of the final
+      exam and your target overall grade to determine the final exam score
+      required.
+    </p>
+
+    <h2>Final Exam Calculator Example</h2>
+
+    <p>
+      Suppose your current grade is <strong>70%</strong>, your final exam is
+      worth <strong>40%</strong> of the course, and you want an overall grade
+      of <strong>80%</strong>.
+    </p>
+
+    <p>
+      Required final exam mark:
+    </p>
+
+    <p>
+      (80 − 70 × 0.60) ÷ 0.40
+      = (80 − 42) ÷ 0.40
+      = 38 ÷ 0.40
+      = <strong>95%</strong>
+    </p>
+
+    <p>
+      Therefore, you would need approximately <strong>95%</strong> on the
+      final exam to finish the course with an overall grade of 80%.
+    </p>
+
+    <h2>How to Use the Final Exam Calculator</h2>
+
+    <ol>
+      <li>Enter your current grade before the final exam.</li>
+      <li>Enter the percentage weight of your final exam.</li>
+      <li>Enter the overall grade you want to achieve.</li>
+      <li>Click <strong>Calculate</strong>.</li>
+      <li>Use the result to understand the final exam score you need.</li>
+    </ol>
+
+    <h2>What If I Need More Than 100%?</h2>
+
+    <p>
+      If the calculator shows that you need more than 100%, your target grade
+      cannot be reached through the final exam alone with the entered values.
+      This can happen when your current grade is too low or the final exam
+      does not have enough weight to raise your overall grade to the target.
+    </p>
+
+    <p>
+      In that situation, check your course policy for extra credit,
+      additional assessments, grade replacement or other available options.
+    </p>
+
+    <h2>Using the Pass Mark as Your Target</h2>
+
+    <p>
+      You can use the passing percentage for your course as the target. This
+      lets you estimate the minimum final exam score required to pass the
+      course.
+    </p>
+
+    <p>
+      For example, if your institution requires 50% to pass, enter
+      <strong>50</strong> as the target overall grade.
+    </p>
+
+    <h2>Tips for Getting an Accurate Result</h2>
+
+    <ul>
+      <li>Enter your actual current course percentage.</li>
+      <li>Check the official percentage weight of the final exam.</li>
+      <li>Use the correct target grade for your course.</li>
+      <li>Check whether your course has a separate minimum final-exam requirement.</li>
+      <li>Use the result as a planning estimate and confirm grading rules with your institution.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What should I enter as "grade so far"?</summary>
+
+      <p>
+        Enter the percentage you have earned from assessments completed before
+        the final exam. It should represent your current average based on the
+        completed coursework.
+      </p>
+    </details>
+
+    <details>
+      <summary>How do I calculate the marks needed in my final exam?</summary>
+
+      <p>
+        Enter your current grade, the final exam weight and your target overall
+        grade. The calculator uses these values to determine the final exam
+        percentage required to reach your target.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I use my pass mark as the target?</summary>
+
+      <p>
+        Yes. Enter your course's passing percentage as the target to estimate
+        the minimum final exam score needed to pass.
+      </p>
+    </details>
+
+    <details>
+      <summary>What if the required mark is above 100%?</summary>
+
+      <p>
+        A result above 100% means your target cannot be reached through the
+        final exam alone under the entered grading weights. Check your course
+        policy for extra credit or other assessment options.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the final exam have to be the only remaining assessment?</summary>
+
+      <p>
+        This calculator assumes the final exam is the remaining assessment
+        represented by the entered exam weight. If other assessments remain,
+        include them according to your course's grading system or use the
+        Grade Calculator for a more detailed weighted-grade calculation.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the Final Exam Calculator save my information?</summary>
+
+      <p>
+        No. The calculation is performed in your browser and the information
+        you enter is not sent to a server.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="grade.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="award"></i>
+        </div>
+
+        <h3>Grade Calculator</h3>
+
+        <p>
+          Calculate your overall weighted grade from scores and assessment
+          weights.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="percentage.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="percent"></i>
+        </div>
+
+        <h3>Percentage Calculator</h3>
+
+        <p>
+          Calculate percentages, percentage changes and shares quickly.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="gpa-goal.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="target"></i>
+        </div>
+
+        <h3>GPA Goal Calculator</h3>
+
+        <p>
+          Find the GPA you need to reach your target cumulative GPA.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container fgrid">
+
+    <div class="fbrand">
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
+      <div class="social">
+
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+
+        <!-- Add real social profile links here once the accounts exist. -->
+
+      </div>
+
+    </div>
+
+    <nav aria-label="Popular tools">
+
+      <p class="ft">Popular tools</p>
+
+      <a href="../tools/attendance.html">
+        Attendance Calculator
+      </a>
+
+      <a href="../tools/semester-gpa.html">
+        Semester GPA Calculator
+      </a>
+
+      <a href="../tools/cgpa.html">
+        CGPA Calculator
+      </a>
+
+      <a href="../tools/scientific.html">
+        Scientific Calculator
+      </a>
+
+      <a href="../tools/percentage.html">
+        Percentage Calculator
+      </a>
+
+    </nav>
+
+    <nav aria-label="Resources">
+
+      <p class="ft">Resources</p>
+
+      <a href="../tools/index.html">
+        All Tools
+      </a>
+
+      <a href="../guides/index.html">
+        Guides
+      </a>
+
+      <a href="../index.html#faqH">
+        FAQ
+      </a>
+
+      <a href="../about.html">
+        About
+      </a>
+
+      <a href="../contact.html">
+        Contact
+      </a>
+
+    </nav>
+
+    <nav aria-label="Legal">
+
+      <p class="ft">Legal</p>
+
+      <a href="../privacy.html">
+        Privacy Policy
+      </a>
+
+      <a href="../terms.html">
+        Terms of Use
+      </a>
+
+      <a href="../disclaimer.html">
+        Disclaimer
+      </a>
+
+    </nav>
+
   </div>
+
   <div class="container fbar">
-    <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p>
+      © 2026 Student Tools. All rights reserved.
+    </p>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/calculators.js"></script><script src="../js/calc-core.js"></script><script src="../js/main.js"></script>
+<script src="../js/calculators.js"></script>
+<script src="../js/calc-core.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

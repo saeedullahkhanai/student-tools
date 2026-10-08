@@ -3,71 +3,558 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Word Counter - Count Words, Characters &amp; Reading Time</title>
-<meta name="description" content="Count words, characters, sentences and paragraphs and estimate reading time as you type. Your text stays in your browser.">
+<meta name="description" content="Free online word counter to count words, characters, sentences and paragraphs, calculate reading time, and check text length instantly. Your text stays in your browser.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/word-counter.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
 <meta property="og:title" content="Word Counter - Count Words, Characters &amp; Reading Time">
-<meta property="og:description" content="Count words, characters, sentences and paragraphs and estimate reading time as you type. Your text stays in your browser.">
+<meta property="og:description" content="Free online word counter to count words, characters, sentences and paragraphs, calculate reading time, and check text length instantly. Your text stays in your browser.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/word-counter.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Word Counter","url":"https://saeedullahkhanai.github.io/student-tools/tools/word-counter.html","description":"Count words, characters, sentences and paragraphs and estimate reading time as you type. Your text stays in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Word Counter","item":"https://saeedullahkhanai.github.io/student-tools/tools/word-counter.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Word Counter",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/word-counter.html",
+  "description": "Free online word counter to count words, characters, sentences and paragraphs, calculate reading time, and check text length instantly.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Word Counter",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/word-counter.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the word counter work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type or paste text into the text box. The word counter automatically calculates words, characters, characters without spaces, sentences, paragraphs and estimated reading time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is reading time calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reading time is estimated using an average reading speed of about 200 words per minute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the word counter save my text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Text counting is performed in your browser and the text you enter is not sent to a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the word counter count characters without spaces?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The tool provides both total character count and character count without spaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this tool for essays and assignments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can paste an essay, assignment, article or other text to check its word and character counts."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
+
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode"
+      >
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
+
   </div>
+
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Word Counter</li></ol></nav>
-  <header class="tool-head"><h1>Word Counter</h1><p>Count words, characters, sentences and paragraphs, and estimate reading time as you type.</p></header>
-  <section class="calc single" aria-label="Word counter"><div class="card panel"><div class="field"><label for="text">Your text</label><textarea id="text" rows="8" placeholder="Type or paste your text here..."></textarea></div><div class="btns"><button type="button" class="btn btn-ghost" id="clear">Clear</button></div></div>
-<section class="card panel"><h2 class="res-title">Counts</h2><div class="stats three"><div class="stat"><span class="label">Words</span><b id="words">0</b></div><div class="stat"><span class="label">Characters</span><b id="chars">0</b></div><div class="stat"><span class="label">Characters (no spaces)</span><b id="nospace">0</b></div><div class="stat"><span class="label">Sentences</span><b id="sentences">0</b></div><div class="stat"><span class="label">Paragraphs</span><b id="paras">0</b></div><div class="stat"><span class="label">Reading time</span><b id="time">0</b></div></div></section></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
-  <article class="content">
-    <h2>How it works</h2><p>Type or paste text into the box. All counts update live. Your text never leaves your browser.</p>
-    <h2>Formula</h2><div class="formula">Reading time = Words ÷ 200 words per minute</div>
-    <h2>Example</h2><p>A 600-word essay takes about <strong>3 minutes</strong> to read.</p>
-    <h2>Tips</h2><ul><li>Check your assignment word limit before submitting.</li><li>Sentences are counted by . ! and ? marks.</li><li>Paragraphs are separated by a blank line.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>Is my text stored?</summary><p>No. Counting happens in your browser only.</p></details><details><summary>How is reading time estimated?</summary><p>At an average of 200 words per minute.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="unit-converter.html"><div class="ic" aria-hidden="true"><i data-icon="arrow-left-right"></i></div><h3>Unit Converter</h3><p>Convert length, weight and temperature.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="date-diff.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-range"></i></div><h3>Days Between Dates</h3><p>Find the number of days between two dates.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
-  </article>
-</main>
-<footer class="footer">
-  <div class="container fgrid">
-    <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
-      <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Tools</a></li>
+      <li aria-current="page">Word Counter</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+
+    <h1>Word Counter</h1>
+
+    <p>
+      Use this free online word counter to count words, characters,
+      sentences and paragraphs, and estimate reading time as you type.
+    </p>
+
+  </header>
+
+  <section class="calc single" aria-label="Word counter">
+
+    <div class="card panel">
+
+      <div class="field">
+
+        <label for="text">Your text</label>
+
+        <textarea
+          id="text"
+          rows="8"
+          placeholder="Type or paste your text here..."
+        ></textarea>
+
       </div>
+
+      <div class="btns">
+
+        <button
+          type="button"
+          class="btn btn-ghost"
+          id="clear"
+        >
+          Clear
+        </button>
+
+      </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <section class="card panel">
+
+      <h2 class="res-title">Text Statistics</h2>
+
+      <div class="stats three">
+
+        <div class="stat">
+          <span class="label">Words</span>
+          <b id="words">0</b>
+        </div>
+
+        <div class="stat">
+          <span class="label">Characters</span>
+          <b id="chars">0</b>
+        </div>
+
+        <div class="stat">
+          <span class="label">Characters (no spaces)</span>
+          <b id="nospace">0</b>
+        </div>
+
+        <div class="stat">
+          <span class="label">Sentences</span>
+          <b id="sentences">0</b>
+        </div>
+
+        <div class="stat">
+          <span class="label">Paragraphs</span>
+          <b id="paras">0</b>
+        </div>
+
+        <div class="stat">
+          <span class="label">Reading time</span>
+          <b id="time">0</b>
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
   </div>
+
+  <article class="content">
+
+    <h2>How to Use the Word Counter</h2>
+
+    <p>
+      Type or paste your text into the text box. The tool automatically
+      updates the word count, character count, sentence count,
+      paragraph count and estimated reading time as you type.
+    </p>
+
+    <p>
+      This tool can be useful for students checking essays and assignments,
+      writers checking article length, and anyone who needs a quick text
+      statistics tool.
+    </p>
+
+    <h2>What Does the Word Counter Measure?</h2>
+
+    <ul>
+      <li><strong>Words:</strong> Counts the words in your text.</li>
+      <li><strong>Characters:</strong> Counts all characters, including spaces.</li>
+      <li><strong>Characters without spaces:</strong> Counts characters after spaces are excluded.</li>
+      <li><strong>Sentences:</strong> Counts sentences based on common sentence-ending punctuation.</li>
+      <li><strong>Paragraphs:</strong> Counts separate blocks of text.</li>
+      <li><strong>Reading time:</strong> Estimates how long the text may take to read.</li>
+    </ul>
+
+    <h2>Reading Time Formula</h2>
+
+    <div class="formula">
+      Reading Time = Words ÷ 200 Words Per Minute
+    </div>
+
+    <p>
+      The calculator uses an average reading speed of approximately
+      200 words per minute. Actual reading speed can vary depending
+      on the reader and the difficulty of the text.
+    </p>
+
+    <h2>Word Counter Example</h2>
+
+    <p>
+      If your essay contains <strong>600 words</strong>, the estimated
+      reading time at 200 words per minute is approximately:
+    </p>
+
+    <p>
+      600 ÷ 200 = <strong>3 minutes</strong>
+    </p>
+
+    <h2>Word Count for Essays and Assignments</h2>
+
+    <p>
+      Many school and university assignments have a required word limit.
+      You can paste your assignment into this tool to quickly check the
+      number of words before submitting it.
+    </p>
+
+    <p>
+      Remember that your institution may have specific rules about
+      whether headings, references, quotations or other sections count
+      toward the official word limit.
+    </p>
+
+    <h2>Characters With and Without Spaces</h2>
+
+    <p>
+      The total character count includes spaces, while the
+      "Characters (no spaces)" count excludes spaces. This can be useful
+      when a form or platform has a character limit.
+    </p>
+
+    <h2>Tips for Checking Your Text</h2>
+
+    <ul>
+      <li>Check your assignment word limit before submitting.</li>
+      <li>Paste the complete text if you want a more accurate total.</li>
+      <li>Use the character count when a website has a character limit.</li>
+      <li>Review the sentence count if you are checking writing structure.</li>
+      <li>Remember that reading time is only an estimate.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How does the word counter work?</summary>
+      <p>
+        Type or paste text into the text box. The tool automatically
+        calculates words, characters, characters without spaces,
+        sentences, paragraphs and estimated reading time.
+      </p>
+    </details>
+
+    <details>
+      <summary>How is reading time calculated?</summary>
+      <p>
+        Reading time is estimated using an average reading speed of
+        about 200 words per minute.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the word counter save my text?</summary>
+      <p>
+        No. Text counting is performed in your browser and the text
+        you enter is not sent to a server.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does it count characters without spaces?</summary>
+      <p>
+        Yes. The tool provides both the total character count and
+        character count without spaces.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I use it for essays and assignments?</summary>
+      <p>
+        Yes. You can paste an essay, assignment, article or other text
+        to check its word and character counts.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="unit-converter.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="arrow-left-right"></i>
+        </div>
+
+        <h3>Unit Converter</h3>
+
+        <p>
+          Convert common units of length, weight and temperature.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="percentage.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="percent"></i>
+        </div>
+
+        <h3>Percentage Calculator</h3>
+
+        <p>
+          Calculate percentages, shares and percentage changes.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+      <a class="card" href="date-diff.html">
+
+        <div class="ic" aria-hidden="true">
+          <i data-icon="calendar-range"></i>
+        </div>
+
+        <h3>Days Between Dates</h3>
+
+        <p>
+          Calculate the number of days, weeks and months between dates.
+        </p>
+
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
+  </article>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container fgrid">
+
+    <div class="fbrand">
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
+      <div class="social">
+
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+
+        <!-- Add real social profile links here once the accounts exist. -->
+
+      </div>
+
+    </div>
+
+    <nav aria-label="Popular tools">
+
+      <p class="ft">Popular tools</p>
+
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+
+    </nav>
+
+    <nav aria-label="Resources">
+
+      <p class="ft">Resources</p>
+
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+
+    </nav>
+
+    <nav aria-label="Legal">
+
+      <p class="ft">Legal</p>
+
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+
+    </nav>
+
+  </div>
+
   <div class="container fbar">
+
     <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/word-counter.js"></script><script src="../js/main.js"></script>
+<script src="../js/word-counter.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

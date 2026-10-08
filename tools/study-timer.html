@@ -3,74 +3,536 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Study Timer - Pomodoro Focus &amp; Break Timer</title>
-<meta name="description" content="A simple Pomodoro-style study timer. Set your focus and break times, stay on task and track completed sessions as you study.">
+
+<title>Study Timer - Free Pomodoro Focus &amp; Break Timer</title>
+
+<meta name="description" content="Free study timer and Pomodoro timer for focused study sessions. Set focus and break times, track completed sessions and study more effectively.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/study-timer.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="Study Timer - Pomodoro Focus &amp; Break Timer">
-<meta property="og:description" content="A simple Pomodoro-style study timer. Set your focus and break times, stay on task and track completed sessions as you study.">
+<meta property="og:title" content="Study Timer - Free Pomodoro Focus &amp; Break Timer">
+<meta property="og:description" content="Free study timer and Pomodoro timer for focused study sessions. Set focus and break times, track completed sessions and study more effectively.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/study-timer.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Study Timer","url":"https://saeedullahkhanai.github.io/student-tools/tools/study-timer.html","description":"A simple Pomodoro-style study timer. Set your focus and break times, stay on task and track completed sessions as you study.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"inLanguage":"en"}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"},{"@type":"ListItem","position":3,"name":"Study Timer","item":"https://saeedullahkhanai.github.io/student-tools/tools/study-timer.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- WebApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Study Timer",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/study-timer.html",
+  "description": "Free study timer and Pomodoro timer for focused study sessions. Set focus and break times, track completed sessions and study more effectively.",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Study Timer",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/study-timer.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a study timer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A study timer helps you divide study time into focused work periods and short breaks. This page provides a simple Pomodoro-style timer that you can customize."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Pomodoro study method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Pomodoro method is a time-management technique that uses focused study periods followed by short breaks. A common pattern is 25 minutes of focus followed by a 5-minute break."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change the focus and break times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can set the focus time from 1 to 180 minutes and the break time from 1 to 60 minutes before starting the timer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the study timer work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once the page has loaded, the timer can work without an internet connection because the timer runs in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the study timer save my study information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The timer works in your browser and does not require you to create an account or send your study session information to a server."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="true">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Tools</a></li><li aria-current="page">Study Timer</li></ol></nav>
-  <header class="tool-head"><h1>Study Timer</h1><p>Study in focused sessions with short breaks using a simple Pomodoro-style timer.</p></header>
-  <section class="calc" aria-label="Study timer"><div class="card panel">
-<div class="field"><label for="focus">Focus time (minutes)</label><input id="focus" type="number" inputmode="numeric" min="1" max="180" step="1" value="25" aria-describedby="focus-err"><p class="err" id="focus-err" role="alert"></p></div>
-<div class="field"><label for="break">Break time (minutes)</label><input id="break" type="number" inputmode="numeric" min="1" max="60" step="1" value="5" aria-describedby="break-err"><p class="err" id="break-err" role="alert"></p></div>
-<div class="btns"><button type="button" class="btn btn-primary" id="startBtn">Start</button><button type="button" class="btn btn-ghost" id="resetBtn">Reset</button></div></div>
-<section class="card panel" aria-label="Timer"><h2 class="res-title">Timer</h2><p class="label" id="mode" aria-live="polite">Focus time</p><p class="big" id="time" role="timer">25:00</p><div class="bar" aria-hidden="true"><i id="barFill"></i></div><p class="note" id="sessions">Completed focus sessions: 0</p><p class="legend" id="msg" aria-live="polite">Set your times and press Start.</p></section></section>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Tools</a></li>
+      <li aria-current="page">Study Timer</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+    <h1>Study Timer</h1>
+    <p>
+      Use this free study timer and Pomodoro-style focus timer to organize
+      focused study sessions, take regular breaks and track completed sessions.
+    </p>
+  </header>
+
+  <!-- Study Timer -->
+  <section class="calc" aria-label="Study timer">
+
+    <div class="card panel">
+
+      <div class="field">
+        <label for="focus">Focus time (minutes)</label>
+        <input
+          id="focus"
+          type="number"
+          inputmode="numeric"
+          min="1"
+          max="180"
+          step="1"
+          value="25"
+          aria-describedby="focus-err">
+        <p class="err" id="focus-err" role="alert"></p>
+      </div>
+
+      <div class="field">
+        <label for="break">Break time (minutes)</label>
+        <input
+          id="break"
+          type="number"
+          inputmode="numeric"
+          min="1"
+          max="60"
+          step="1"
+          value="5"
+          aria-describedby="break-err">
+        <p class="err" id="break-err" role="alert"></p>
+      </div>
+
+      <div class="btns">
+        <button type="button" class="btn btn-primary" id="startBtn">
+          Start
+        </button>
+
+        <button type="button" class="btn btn-ghost" id="resetBtn">
+          Reset
+        </button>
+      </div>
+
+    </div>
+
+    <section class="card panel" aria-label="Timer">
+
+      <h2 class="res-title">Study Timer</h2>
+
+      <p class="label" id="mode" aria-live="polite">
+        Focus time
+      </p>
+
+      <p class="big" id="time" role="timer">
+        25:00
+      </p>
+
+      <div class="bar" aria-hidden="true">
+        <i id="barFill"></i>
+      </div>
+
+      <p class="note" id="sessions">
+        Completed focus sessions: 0
+      </p>
+
+      <p class="legend" id="msg" aria-live="polite">
+        Set your times and press Start.
+      </p>
+
+    </section>
+
+  </section>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
+  </div>
+
+  <!-- Educational Content -->
   <article class="content">
-    <h2>How it works</h2><p>Set how long you want to focus and how long to rest. Press Start, study until the timer ends, then take your break. A sound plays when each period finishes.</p>
-    <h2>Formula</h2><div class="formula">1 session = Focus time + Break time</div><p>A common pattern is 25 minutes of focus and 5 minutes of rest. After 4 sessions, take a longer break.</p>
-    <h2>Example</h2><p>With 25 minutes of focus and 5 minutes of break, four sessions take <strong>2 hours</strong> including breaks.</p>
-    <h2>Tips</h2><ul><li>Put your phone away during focus time.</li><li>Write down what you will study before you start.</li><li>Keep this tab open: the timer keeps correct time even if the tab is in the background.</li></ul>
-    <h2>Frequently Asked Questions</h2><details><summary>Does it work offline?</summary><p>Yes, once the page is loaded. Nothing is sent to a server.</p></details><details><summary>Why did it not start?</summary><p>Focus and break times must be whole numbers between 1 and the shown limit.</p></details>
-    <h2>Related tools</h2><div class="grid related"><a class="card" href="attendance.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-check"></i></div><h3>Attendance Calculator</h3><p>Check your attendance and how many classes you can miss.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="date-diff.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-range"></i></div><h3>Days Between Dates</h3><p>Find the number of days between two dates.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="word-counter.html"><div class="ic" aria-hidden="true"><i data-icon="type"></i></div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><p><a href="index.html">Browse all student tools</a></p>
+
+    <h2>How to Use the Study Timer</h2>
+
+    <p>
+      Enter the amount of time you want to study and the length of your break.
+      The timer starts with your focus period and then switches to break time
+      when the focus session ends. Completed focus sessions are counted
+      automatically.
+    </p>
+
+    <p>
+      A common starting point is <strong>25 minutes of focused study</strong>
+      followed by a <strong>5-minute break</strong>. You can change these
+      values depending on your subject, workload and study routine.
+    </p>
+
+    <h2>What Is the Pomodoro Study Method?</h2>
+
+    <p>
+      The Pomodoro method is a simple time-management technique that divides
+      study into focused work periods followed by short breaks. The goal is to
+      give your attention a clear task and a defined amount of time.
+    </p>
+
+    <p>
+      There is no single schedule that works for every student. You can use
+      shorter or longer focus periods depending on your concentration and the
+      type of work you are doing.
+    </p>
+
+    <h2>Study Timer Formula</h2>
+
+    <div class="formula">
+      1 study cycle = Focus time + Break time
+    </div>
+
+    <p>
+      For example, a 25-minute focus period followed by a 5-minute break gives
+      a 30-minute study cycle.
+    </p>
+
+    <h2>Study Timer Example</h2>
+
+    <p>
+      Suppose you choose 25 minutes of focus time and 5 minutes of break time.
+      One complete cycle takes:
+    </p>
+
+    <div class="formula">
+      25 minutes + 5 minutes = 30 minutes
+    </div>
+
+    <p>
+      If you complete four focus sessions, the total time including the
+      four 5-minute breaks is approximately <strong>2 hours</strong>.
+    </p>
+
+    <h2>How to Make the Most of a Study Timer</h2>
+
+    <ul>
+      <li>Choose one clear task before starting a focus session.</li>
+      <li>Remove unnecessary distractions from your study area.</li>
+      <li>Keep your phone away or silence unnecessary notifications.</li>
+      <li>Use the break to rest instead of starting another demanding task.</li>
+      <li>Record difficult topics so you can review them later.</li>
+      <li>Take a longer break after several completed sessions if needed.</li>
+    </ul>
+
+    <h2>Study Timer for Exams and Assignments</h2>
+
+    <p>
+      A study timer can be useful when preparing for exams, completing
+      assignments, reading chapters, practicing programming or reviewing
+      lecture notes. Breaking a large task into smaller timed sessions can
+      make your study plan easier to manage.
+    </p>
+
+    <p>
+      For example, you could use one focus session for reading, another for
+      solving practice questions and another for reviewing your notes.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What is a study timer?</summary>
+      <p>
+        A study timer helps you divide study time into focused work periods
+        and breaks. This page provides a simple Pomodoro-style timer that
+        you can customize.
+      </p>
+    </details>
+
+    <details>
+      <summary>What is the Pomodoro study method?</summary>
+      <p>
+        The Pomodoro method is a time-management technique that uses focused
+        study periods followed by short breaks. A common pattern is
+        25 minutes of focus followed by a 5-minute break.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I change the focus and break times?</summary>
+      <p>
+        Yes. You can set the focus time from 1 to 180 minutes and the break
+        time from 1 to 60 minutes before starting the timer.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the study timer work offline?</summary>
+      <p>
+        Yes. Once the page has loaded, the timer can work without an internet
+        connection because the timer runs in your browser.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the study timer save my study information?</summary>
+      <p>
+        No. The timer works in your browser and does not require an account
+        or send your study session information to a server.
+      </p>
+    </details>
+
+    <h2>Related Student Tools</h2>
+
+    <div class="grid related">
+
+      <a class="card" href="attendance.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="calendar-check"></i>
+        </div>
+        <h3>Attendance Calculator</h3>
+        <p>
+          Calculate your attendance percentage and find how many classes
+          you can miss or need to attend.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+      <a class="card" href="date-diff.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="calendar-range"></i>
+        </div>
+        <h3>Days Between Dates</h3>
+        <p>
+          Calculate the number of days, weeks, months and years between
+          two dates for study planning and deadlines.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+      <a class="card" href="word-counter.html">
+        <div class="ic" aria-hidden="true">
+          <i data-icon="type"></i>
+        </div>
+        <h3>Word Counter</h3>
+        <p>
+          Count words, characters, sentences and paragraphs and estimate
+          reading time for your writing.
+        </p>
+        <span class="mini-btn">
+          Use Tool
+          <i data-icon="arrow-right"></i>
+        </span>
+      </a>
+
+    </div>
+
+    <p>
+      <a href="index.html">Browse all student tools</a>
+    </p>
+
   </article>
+
 </main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
         <!-- Add real social profile links here once the accounts exist. -->
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </nav>
+
   </div>
+
   <div class="container fbar">
-    <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p>
+      © 2026 Student Tools. All rights reserved.
+    </p>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
-<script src="../js/study-timer.js"></script><script src="../js/main.js"></script>
+<script src="../js/study-timer.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>

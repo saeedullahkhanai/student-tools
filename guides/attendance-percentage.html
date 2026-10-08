@@ -3,65 +3,560 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to Calculate Attendance Percentage (With Examples)</title>
-<meta name="description" content="Learn how to calculate attendance percentage with a simple formula, worked examples, and how many classes you can miss or must attend.">
+
+<title>How to Calculate Attendance Percentage - Formula &amp; Examples</title>
+
+<meta name="description" content="Learn how to calculate attendance percentage with the correct formula, step-by-step examples, how many classes you can miss, and how many classes you need to attend to reach your target.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/guides/attendance-percentage.html">
+
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="How to Calculate Attendance Percentage (With Examples)">
-<meta property="og:description" content="Learn how to calculate attendance percentage with a simple formula, worked examples, and how many classes you can miss or must attend.">
+<meta property="og:title" content="How to Calculate Attendance Percentage - Formula &amp; Examples">
+<meta property="og:description" content="Learn how to calculate attendance percentage, find classes you can miss, and calculate how many classes you need to attend to reach a required attendance level.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/guides/attendance-percentage.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Calculate Attendance Percentage","description":"Learn how to calculate attendance percentage with a simple formula, worked examples, and how many classes you can miss or must attend.","mainEntityOfPage":{"@type":"WebPage","@id":"https://saeedullahkhanai.github.io/student-tools/guides/attendance-percentage.html"},"inLanguage":"en","author":{"@type":"Organization","name":"Student Tools"},"publisher":{"@type":"Organization","name":"Student Tools"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://saeedullahkhanai.github.io/student-tools/guides/index.html"},{"@type":"ListItem","position":3,"name":"How to Calculate Attendance Percentage","item":"https://saeedullahkhanai.github.io/student-tools/guides/attendance-percentage.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Calculate Attendance Percentage",
+  "description": "Learn how to calculate attendance percentage with the correct formula, step-by-step examples, how many classes you can miss, and how many classes you need to attend to reach your target.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://saeedullahkhanai.github.io/student-tools/guides/attendance-percentage.html"
+  },
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "Student Tools"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Student Tools"
+  }
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://saeedullahkhanai.github.io/student-tools/guides/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "How to Calculate Attendance Percentage",
+      "item": "https://saeedullahkhanai.github.io/student-tools/guides/attendance-percentage.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is attendance percentage calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Attendance percentage is calculated by dividing the number of classes attended by the total number of classes held and multiplying the result by 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many classes can I miss and still maintain my required attendance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The number of classes you can miss depends on your current attendance, total classes held, and the minimum attendance requirement set by your institution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many classes do I need to attend to increase my attendance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your current attendance is below the required percentage, you can calculate the number of consecutive classes you need to attend using the required attendance formula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does approved leave count as attendance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This depends on your school, college, or university policy. Some institutions may treat approved leave differently from an ordinary absence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Attendance Calculator save my information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculation is performed in your browser, and the information entered into the calculator is not sent to a server."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools">All Tools</a><a href="../guides/index.html" data-nav="guides" aria-current="true">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides" aria-current="true">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
     </div>
+
   </div>
 </header>
+
 <main id="main" class="container">
-  <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="index.html">Guides</a></li><li aria-current="page">How to Calculate Attendance Percentage</li></ol></nav>
-  <header class="tool-head"><span class="tag">Attendance</span><h1>How to Calculate Attendance Percentage</h1><p>A simple formula, worked examples, and how to find how many classes you can miss.</p></header>
-  <article class="content"><h2>What is attendance percentage?</h2><p>Attendance percentage shows how many of the classes held so far you were present for. Many schools and universities require a minimum, often 75% or 80%, to sit exams.</p><h2>The formula</h2><div class="formula">Attendance % = (Classes Attended ÷ Total Classes) × 100</div><h2>Step by step</h2><ol><li>Count the total classes held so far (not the whole semester).</li><li>Count the classes you attended.</li><li>Divide attended classes by total classes.</li><li>Multiply the answer by 100.</li></ol><h2>Example</h2><p>50 classes held and 36 attended: 36 ÷ 50 = 0.72, and 0.72 × 100 = <strong>72%</strong>. If 75% is required, you are below the limit.</p><h2>How many classes can I still miss?</h2><p>If you are above the requirement, you can skip future classes until you reach it. Use ⌊Attended × 100 ÷ Required − Total⌋. With 45 attended out of 50 and 75% required: 45 × 100 ÷ 75 − 50 = <strong>10 classes</strong>.</p><h2>How many classes must I attend to catch up?</h2><p>If you are below, attend classes in a row without missing any. Use ⌈(Required × Total − 100 × Attended) ÷ (100 − Required)⌉. With 36 of 50 and 75% required you need <strong>6 classes</strong>: 42 ÷ 56 = 75%.</p><h2>Common mistakes</h2><ul><li>Using the total number of classes in the whole semester instead of classes held so far.</li><li>Forgetting that approved leave may count as present in your institution.</li><li>Rounding up when your institution does not.</li></ul></article>
-  <h2 class="sec">Try the calculator</h2>
-  <a class="card cta" href="../tools/attendance.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-check"></i></div><h3>Try the Attendance Calculator</h3><p>Check your attendance and how many classes you can miss.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a>
-  <div class="ad" aria-label="Advertisement placeholder">Advertisement</div>
-  <h2 class="sec">More guides</h2><div class="grid"><a class="card" href="calculate-gpa.html"><div class="ic" aria-hidden="true"><i data-icon="book-open"></i></div><span class="tag">GPA</span><h3>How to Calculate GPA</h3><p>Understand credits, grade points and how to work out your semester GPA.</p><span class="mini-btn ghost">Read Guide<i data-icon="arrow-right"></i></span></a><a class="card" href="final-exam-marks.html"><div class="ic" aria-hidden="true"><i data-icon="book-open"></i></div><span class="tag">Exams</span><h3>How Many Marks Do I Need in My Final Exam?</h3><p>Work out the score you need in the final exam to reach your target grade.</p><span class="mini-btn ghost">Read Guide<i data-icon="arrow-right"></i></span></a><a class="card" href="calculate-cgpa.html"><div class="ic" aria-hidden="true"><i data-icon="book-open"></i></div><span class="tag">GPA</span><h3>How to Calculate CGPA</h3><p>Combine several semesters into one cumulative GPA, the right way.</p><span class="mini-btn ghost">Read Guide<i data-icon="arrow-right"></i></span></a></div>
-</main>
-<footer class="footer">
-  <div class="container fgrid">
-    <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
-      <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
-      </div>
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html">Guides</a></li>
+      <li aria-current="page">How to Calculate Attendance Percentage</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+    <span class="tag">Attendance</span>
+
+    <h1>How to Calculate Attendance Percentage</h1>
+
+    <p>
+      Learn the attendance percentage formula, calculate your current attendance,
+      find how many classes you can miss, and work out how many classes you need
+      to attend to reach your target.
+    </p>
+  </header>
+
+  <article class="content">
+
+    <h2>What Is Attendance Percentage?</h2>
+
+    <p>
+      Attendance percentage shows the proportion of classes you attended compared
+      with the total number of classes held so far. It is commonly used by schools,
+      colleges, and universities to monitor student attendance.
+    </p>
+
+    <p>
+      For example, if 50 classes have been held and you attended 40 of them,
+      your attendance percentage is 80%.
+    </p>
+
+    <p>
+      Many institutions have a minimum attendance requirement. The exact
+      requirement can vary, so always check your institution's official policy.
+    </p>
+
+    <h2>Attendance Percentage Formula</h2>
+
+    <div class="formula">
+      Attendance % = (Classes Attended ÷ Total Classes) × 100
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <p>
+      You only need two numbers: the number of classes you attended and the total
+      number of classes held so far.
+    </p>
+
+    <h2>How to Calculate Attendance Step by Step</h2>
+
+    <ol>
+      <li>Find the total number of classes held so far.</li>
+      <li>Find the number of classes you attended.</li>
+      <li>Divide classes attended by total classes.</li>
+      <li>Multiply the result by 100.</li>
+      <li>Compare your result with your institution's required attendance percentage.</li>
+    </ol>
+
+    <h2>Attendance Percentage Example</h2>
+
+    <p>
+      Suppose 50 classes have been held and you attended 36 classes.
+    </p>
+
+    <p>
+      Attendance = 36 ÷ 50 × 100
+    </p>
+
+    <p>
+      Attendance = 0.72 × 100 = <strong>72%</strong>
+    </p>
+
+    <p>
+      Therefore, your current attendance is <strong>72%</strong>.
+      If your institution requires 75%, you are currently below the required level.
+    </p>
+
+    <h2>How Many Classes Can I Miss?</h2>
+
+    <p>
+      If your current attendance is above the required minimum, you may be able
+      to miss some future classes while remaining above the required percentage.
+      The exact number depends on your current attendance and the required percentage.
+    </p>
+
+    <p>
+      A useful formula for the maximum number of additional classes you can miss is:
+    </p>
+
+    <div class="formula">
+      Maximum Classes You Can Miss =
+      (Attended × 100 ÷ Required %) − Total Classes
+    </div>
+
+    <p>
+      For example, suppose you attended 45 out of 50 classes and your required
+      attendance is 75%.
+    </p>
+
+    <p>
+      Maximum classes you can miss = (45 × 100 ÷ 75) − 50
+    </p>
+
+    <p>
+      = 60 − 50 = <strong>10 classes</strong>
+    </p>
+
+    <p>
+      In practice, always consider your institution's rounding rules and attendance
+      policy before relying on the result.
+    </p>
+
+    <h2>How Many Classes Do I Need to Attend to Increase Attendance?</h2>
+
+    <p>
+      If your current attendance is below the required percentage, you can estimate
+      how many consecutive classes you need to attend without missing any.
+    </p>
+
+    <div class="formula">
+      Required Classes =
+      (Required % × Total Classes − 100 × Classes Attended)
+      ÷ (100 − Required %)
+    </div>
+
+    <p>
+      For example, if you attended 36 out of 50 classes and need to reach 75%:
+    </p>
+
+    <p>
+      Required classes =
+      (75 × 50 − 100 × 36) ÷ (100 − 75)
+    </p>
+
+    <p>
+      = (3750 − 3600) ÷ 25
+      = 150 ÷ 25
+      = <strong>6 classes</strong>
+    </p>
+
+    <p>
+      After attending the next 6 classes:
+      42 attended ÷ 56 total × 100 = <strong>75%</strong>.
+    </p>
+
+    <h2>Attendance Requirements</h2>
+
+    <p>
+      Attendance requirements are different from one institution to another.
+      Some institutions may require 75%, while others may use a different minimum.
+      Always use the official requirement provided by your school, college,
+      university, or department.
+    </p>
+
+    <h2>Common Attendance Calculation Mistakes</h2>
+
+    <ul>
+      <li>Using the total classes planned for the whole semester instead of classes held so far.</li>
+      <li>Entering the number of missed classes instead of attended classes.</li>
+      <li>Ignoring the institution's official attendance policy.</li>
+      <li>Rounding the result incorrectly.</li>
+      <li>Assuming approved leave is treated the same way at every institution.</li>
+      <li>Forgetting that future classes change both the attended and total class counts.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>How is attendance percentage calculated?</summary>
+      <p>
+        Divide the number of classes attended by the total number of classes held,
+        then multiply the result by 100.
+      </p>
+    </details>
+
+    <details>
+      <summary>How many classes can I miss and still maintain my required attendance?</summary>
+      <p>
+        It depends on your current attendance, total classes held, and the minimum
+        attendance percentage required by your institution.
+      </p>
+    </details>
+
+    <details>
+      <summary>How many classes do I need to attend to increase my attendance?</summary>
+      <p>
+        If your attendance is below the required level, calculate how many consecutive
+        classes you need to attend without missing any. Your exact result depends on
+        your current attendance and required percentage.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does approved leave count as attendance?</summary>
+      <p>
+        This depends on your institution's rules. Check the official attendance
+        policy of your school, college, or university.
+      </p>
+    </details>
+
+    <details>
+      <summary>Does the Attendance Calculator save my information?</summary>
+      <p>
+        No. The calculation is performed in your browser, and the information you
+        enter is not sent to a server.
+      </p>
+    </details>
+
+  </article>
+
+  <h2 class="sec">Try the Attendance Calculator</h2>
+
+  <a class="card cta" href="../tools/attendance.html">
+    <div class="ic" aria-hidden="true">
+      <i data-icon="calendar-check"></i>
+    </div>
+
+    <h3>Attendance Calculator</h3>
+
+    <p>
+      Calculate your attendance percentage and find how many classes you can miss
+      or need to attend to reach your target.
+    </p>
+
+    <span class="mini-btn">
+      Use Tool
+      <i data-icon="arrow-right"></i>
+    </span>
+  </a>
+
+  <div class="ad" aria-label="Advertisement placeholder">
+    Advertisement
   </div>
+
+  <h2 class="sec">More Student Guides</h2>
+
+  <div class="grid">
+
+    <a class="card" href="calculate-gpa.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="book-open"></i>
+      </div>
+
+      <span class="tag">GPA</span>
+
+      <h3>How to Calculate GPA</h3>
+
+      <p>
+        Learn how credits and grade points are used to calculate your semester GPA.
+      </p>
+
+      <span class="mini-btn ghost">
+        Read Guide
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="calculate-cgpa.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="book-open"></i>
+      </div>
+
+      <span class="tag">CGPA</span>
+
+      <h3>How to Calculate CGPA</h3>
+
+      <p>
+        Learn how to combine semester GPAs using credit-weighted CGPA calculation.
+      </p>
+
+      <span class="mini-btn ghost">
+        Read Guide
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="final-exam-marks.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="book-open"></i>
+      </div>
+
+      <span class="tag">Exams</span>
+
+      <h3>How Many Marks Do I Need in My Final Exam?</h3>
+
+      <p>
+        Calculate the final exam score needed to reach your target overall grade.
+      </p>
+
+      <span class="mini-btn ghost">
+        Read Guide
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container fgrid">
+
+    <div class="fbrand">
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities for
+        students and teachers.
+      </p>
+
+      <div class="social">
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </nav>
+
+  </div>
+
   <div class="container fbar">
+
     <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>

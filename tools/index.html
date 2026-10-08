@@ -3,56 +3,640 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All Student Tools - Free Calculators &amp; Utilities</title>
-<meta name="description" content="Browse every free Student Tools calculator and utility: attendance, GPA, CGPA, grades, percentages, dates, unit converter, word counter and more.">
+
+<title>All Student Tools - Free Calculators &amp; Study Utilities</title>
+
+<meta name="description" content="Explore free student calculators and study tools for GPA, CGPA, attendance, grades, percentages, exams, dates, unit conversion, word counting and focused study sessions.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/tools/index.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="All Student Tools - Free Calculators &amp; Utilities">
-<meta property="og:description" content="Browse every free Student Tools calculator and utility: attendance, GPA, CGPA, grades, percentages, dates, unit converter, word counter and more.">
+<meta property="og:title" content="All Student Tools - Free Calculators &amp; Study Utilities">
+<meta property="og:description" content="Explore free student calculators and study tools for GPA, CGPA, attendance, grades, percentages, exams, dates, unit conversion, word counting and focused study sessions.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/tools/index.html">
+
 <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"All Tools","item":"https://saeedullahkhanai.github.io/student-tools/tools/index.html"}]}</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tools.css">
+
+<!-- WebPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "All Student Tools",
+  "url": "https://saeedullahkhanai.github.io/student-tools/tools/index.html",
+  "description": "Free student calculators and study utilities for GPA, CGPA, attendance, grades, percentages, exams, dates, unit conversion, word counting and study sessions.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "All Tools",
+      "item": "https://saeedullahkhanai.github.io/student-tools/tools/index.html"
+    }
+  ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What student tools are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Student Tools provides calculators and utilities for attendance, GPA, CGPA, grades, final exam marks, percentages, scientific calculations, date differences, unit conversion, word counting and study timing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these student calculators free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculators and study tools on Student Tools are available to use for free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use these tools on a phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The website is designed to work on desktop computers, tablets and mobile devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to create an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The tools can be used without creating an account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are calculations performed in the browser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculators are designed to perform their calculations in the browser, so you can enter values and receive results without needing an account."
+      }
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="../index.html" data-nav="home">Home</a><a href="../tools/index.html" data-nav="tools" aria-current="page">All Tools</a><a href="../guides/index.html" data-nav="guides">Guides</a><a href="../about.html" data-nav="about">About</a><a href="../contact.html" data-nav="contact">Contact</a></nav>
+
+    <a class="brand" href="../index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../tools/index.html" data-nav="tools" aria-current="page">All Tools</a>
+      <a href="../guides/index.html" data-nav="guides">Guides</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../contact.html" data-nav="contact">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
-<main id="main" class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li aria-current="page">All Tools</li></ol></nav><header class="tool-head"><h1>All Tools</h1><p>Every free tool in one place. Pick a category and start calculating.</p></header><nav class="chips" aria-label="Categories"><a href="#cat-university-tools"><i data-icon="graduation-cap"></i> University Tools</a><a href="#cat-study-tools"><i data-icon="book-open"></i> Study Tools</a><a href="#cat-calculators"><i data-icon="calculator"></i> Calculators</a><a href="#cat-date-time"><i data-icon="clock"></i> Date &amp; Time</a><a href="#cat-converters"><i data-icon="repeat"></i> Converters</a><a href="#cat-text-tools"><i data-icon="file-text"></i> Text Tools</a></nav><h2 class="sec" id="cat-university-tools"><i data-icon="graduation-cap"></i> University Tools</h2><div class="grid"><a class="card" href="attendance.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-check"></i></div><h3>Attendance Calculator</h3><p>Check your attendance and how many classes you can miss.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="gpa-goal.html"><div class="ic" aria-hidden="true"><i data-icon="target"></i></div><h3>GPA Goal Calculator</h3><p>Find the GPA you need to reach your target CGPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="final-exam.html"><div class="ic" aria-hidden="true"><i data-icon="clipboard-check"></i></div><h3>Final Exam Required Marks</h3><p>See what you need in the final exam to hit a grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="semester-gpa.html"><div class="ic" aria-hidden="true"><i data-icon="graduation-cap"></i></div><h3>Semester GPA Calculator</h3><p>Calculate your GPA for the semester.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="cgpa.html"><div class="ic" aria-hidden="true"><i data-icon="bar-chart"></i></div><h3>CGPA Calculator</h3><p>Combine semester GPAs into one cumulative GPA.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><h2 class="sec" id="cat-study-tools"><i data-icon="book-open"></i> Study Tools</h2><div class="grid"><a class="card" href="study-timer.html"><div class="ic" aria-hidden="true"><i data-icon="timer"></i></div><h3>Study Timer</h3><p>Focus and break timer to study in short sessions.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><h2 class="sec" id="cat-calculators"><i data-icon="calculator"></i> Calculators</h2><div class="grid"><a class="card" href="scientific.html"><div class="ic" aria-hidden="true"><i data-icon="sigma"></i></div><h3>Scientific Calculator</h3><p>Trigonometry, logs, powers, roots and a calculation history.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="percentage.html"><div class="ic" aria-hidden="true"><i data-icon="percent"></i></div><h3>Percentage Calculator</h3><p>Work out percentages, shares and changes.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a><a class="card" href="grade.html"><div class="ic" aria-hidden="true"><i data-icon="award"></i></div><h3>Grade Calculator</h3><p>Turn scores and weights into your overall grade.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><h2 class="sec" id="cat-date-time"><i data-icon="clock"></i> Date &amp; Time</h2><div class="grid"><a class="card" href="date-diff.html"><div class="ic" aria-hidden="true"><i data-icon="calendar-range"></i></div><h3>Days Between Dates</h3><p>Find the number of days between two dates.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><h2 class="sec" id="cat-converters"><i data-icon="repeat"></i> Converters</h2><div class="grid"><a class="card" href="unit-converter.html"><div class="ic" aria-hidden="true"><i data-icon="arrow-left-right"></i></div><h3>Unit Converter</h3><p>Convert length, weight and temperature.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div><h2 class="sec" id="cat-text-tools"><i data-icon="file-text"></i> Text Tools</h2><div class="grid"><a class="card" href="word-counter.html"><div class="ic" aria-hidden="true"><i data-icon="type"></i></div><h3>Word Counter</h3><p>Count words, characters, sentences and reading time.</p><span class="mini-btn">Use Tool<i data-icon="arrow-right"></i></span></a></div></main>
+
+<main id="main" class="container">
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../index.html">Home</a></li>
+      <li aria-current="page">All Tools</li>
+    </ol>
+  </nav>
+
+  <header class="tool-head">
+    <h1>Free Student Calculators &amp; Study Tools</h1>
+    <p>
+      Explore free calculators and useful study tools for university,
+      college and everyday academic work. Calculate GPA, CGPA, attendance,
+      grades, percentages and more.
+    </p>
+  </header>
+
+  <nav class="chips" aria-label="Tool categories">
+    <a href="#cat-university-tools">
+      <i data-icon="graduation-cap"></i>
+      University Tools
+    </a>
+
+    <a href="#cat-study-tools">
+      <i data-icon="book-open"></i>
+      Study Tools
+    </a>
+
+    <a href="#cat-calculators">
+      <i data-icon="calculator"></i>
+      Calculators
+    </a>
+
+    <a href="#cat-date-time">
+      <i data-icon="clock"></i>
+      Date &amp; Time
+    </a>
+
+    <a href="#cat-converters">
+      <i data-icon="repeat"></i>
+      Converters
+    </a>
+
+    <a href="#cat-text-tools">
+      <i data-icon="file-text"></i>
+      Text Tools
+    </a>
+  </nav>
+
+  <p>
+    Choose a tool below to calculate your result instantly. Most tools work
+    directly in your browser and do not require an account or sign-up.
+  </p>
+
+  <!-- University Tools -->
+  <h2 class="sec" id="cat-university-tools">
+    <i data-icon="graduation-cap"></i>
+    University Tools
+  </h2>
+
+  <div class="grid">
+
+    <a class="card" href="attendance.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="calendar-check"></i>
+      </div>
+      <h3>Attendance Calculator</h3>
+      <p>
+        Calculate your attendance percentage, see how many classes you can
+        miss and find how many classes you need to attend to reach a target.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="gpa-goal.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="target"></i>
+      </div>
+      <h3>GPA Goal Calculator</h3>
+      <p>
+        Find the GPA you need in an upcoming semester to reach your target
+        cumulative GPA.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="final-exam.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="clipboard-check"></i>
+      </div>
+      <h3>Final Exam Required Marks</h3>
+      <p>
+        Calculate the marks you need in your final exam to reach your target
+        overall grade.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="semester-gpa.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </div>
+      <h3>Semester GPA Calculator</h3>
+      <p>
+        Calculate your semester GPA from course credits and letter grades
+        using a 4.0 grading scale.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="cgpa.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="bar-chart"></i>
+      </div>
+      <h3>CGPA Calculator</h3>
+      <p>
+        Combine semester GPAs and credit hours to calculate your cumulative
+        GPA using credit weighting.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- Study Tools -->
+  <h2 class="sec" id="cat-study-tools">
+    <i data-icon="book-open"></i>
+    Study Tools
+  </h2>
+
+  <div class="grid">
+
+    <a class="card" href="study-timer.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="timer"></i>
+      </div>
+      <h3>Study Timer</h3>
+      <p>
+        Use focused study and break sessions with a simple customizable
+        Pomodoro-style timer.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- Calculators -->
+  <h2 class="sec" id="cat-calculators">
+    <i data-icon="calculator"></i>
+    Calculators
+  </h2>
+
+  <div class="grid">
+
+    <a class="card" href="scientific.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="sigma"></i>
+      </div>
+      <h3>Scientific Calculator</h3>
+      <p>
+        Perform trigonometry, logarithms, powers, roots, factorials and
+        other scientific calculations.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="percentage.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="percent"></i>
+      </div>
+      <h3>Percentage Calculator</h3>
+      <p>
+        Calculate a percentage of a number, find what percent one number is
+        of another and calculate percentage change.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+    <a class="card" href="grade.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="award"></i>
+      </div>
+      <h3>Grade Calculator</h3>
+      <p>
+        Calculate your overall weighted course grade from scores and
+        assignment weights.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- Date & Time -->
+  <h2 class="sec" id="cat-date-time">
+    <i data-icon="clock"></i>
+    Date &amp; Time
+  </h2>
+
+  <div class="grid">
+
+    <a class="card" href="date-diff.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="calendar-range"></i>
+      </div>
+      <h3>Days Between Dates</h3>
+      <p>
+        Calculate the number of days, weeks, months and years between two
+        dates for deadlines and study planning.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- Converters -->
+  <h2 class="sec" id="cat-converters">
+    <i data-icon="repeat"></i>
+    Converters
+  </h2>
+
+  <div class="grid">
+
+    <a class="card" href="unit-converter.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="arrow-left-right"></i>
+      </div>
+      <h3>Unit Converter</h3>
+      <p>
+        Convert common length, weight and temperature units such as
+        kilometers, miles, kilograms, pounds and Celsius.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- Text Tools -->
+  <h2 class="sec" id="cat-text-tools">
+    <i data-icon="file-text"></i>
+    Text Tools
+  </h2>
+
+  <div class="grid">
+
+    <a class="card" href="word-counter.html">
+      <div class="ic" aria-hidden="true">
+        <i data-icon="type"></i>
+      </div>
+      <h3>Word Counter</h3>
+      <p>
+        Count words, characters, sentences and paragraphs and estimate
+        reading time for essays and other writing.
+      </p>
+      <span class="mini-btn">
+        Use Tool
+        <i data-icon="arrow-right"></i>
+      </span>
+    </a>
+
+  </div>
+
+  <!-- About the Tools -->
+  <article class="content">
+
+    <h2>Free Online Student Tools</h2>
+
+    <p>
+      Student Tools provides a collection of simple online calculators and
+      utilities designed to help students with common academic tasks.
+      Whether you need to calculate your GPA, check attendance, estimate
+      final exam marks or convert measurements, you can use the tools
+      directly in your browser.
+    </p>
+
+    <h2>University and GPA Tools</h2>
+
+    <p>
+      University students can use the attendance, GPA, CGPA and GPA goal
+      calculators to understand their academic results. The Final Exam
+      Calculator can also help estimate the marks required to reach a
+      target overall grade.
+    </p>
+
+    <h2>Study and Productivity Tools</h2>
+
+    <p>
+      The Study Timer helps organize focused study periods and breaks,
+      while the Word Counter can help students check the length of essays,
+      assignments and other written work.
+    </p>
+
+    <h2>Calculators and Utilities</h2>
+
+    <p>
+      The scientific, percentage, date and unit conversion tools are useful
+      for mathematics, science, assignments and everyday calculations.
+      Results are designed to be quick and easy to understand.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <details>
+      <summary>What student tools are available?</summary>
+      <p>
+        Student Tools provides calculators and utilities for attendance,
+        GPA, CGPA, grades, final exam marks, percentages, scientific
+        calculations, date differences, unit conversion, word counting
+        and study timing.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are these student calculators free?</summary>
+      <p>
+        Yes. The calculators and study tools on Student Tools are available
+        to use for free.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I use these tools on a phone?</summary>
+      <p>
+        Yes. The website is designed to work on desktop computers, tablets
+        and mobile devices.
+      </p>
+    </details>
+
+    <details>
+      <summary>Do I need to create an account?</summary>
+      <p>
+        No. The tools can be used without creating an account.
+      </p>
+    </details>
+
+    <details>
+      <summary>Are calculations performed in the browser?</summary>
+      <p>
+        The calculators are designed to perform their calculations in the
+        browser, so you can enter values and receive results without
+        needing an account.
+      </p>
+    </details>
+
+    <h2>Browse Student Tools by Category</h2>
+
+    <p>
+      Use the category links at the top of this page to quickly jump to
+      university tools, study tools, calculators, date and time utilities,
+      converters or text tools.
+    </p>
+
+    <p>
+      <a href="../index.html">
+        Return to the Student Tools homepage
+      </a>
+    </p>
+
+  </article>
+
+</main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="../index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="../index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="../contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
+        <a href="../contact.html" aria-label="Email us">
+          <i data-icon="mail"></i>
+        </a>
+
         <!-- Add real social profile links here once the accounts exist. -->
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="../tools/attendance.html">Attendance Calculator</a><a href="../tools/semester-gpa.html">Semester GPA Calculator</a><a href="../tools/cgpa.html">CGPA Calculator</a><a href="../tools/scientific.html">Scientific Calculator</a><a href="../tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="../tools/index.html">All Tools</a><a href="../guides/index.html">Guides</a><a href="../index.html#faqH">FAQ</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Use</a><a href="../disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="../tools/attendance.html">Attendance Calculator</a>
+      <a href="../tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="../tools/cgpa.html">CGPA Calculator</a>
+      <a href="../tools/scientific.html">Scientific Calculator</a>
+      <a href="../tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="../tools/index.html">All Tools</a>
+      <a href="../guides/index.html">Guides</a>
+      <a href="../index.html#faqH">FAQ</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms of Use</a>
+      <a href="../disclaimer.html">Disclaimer</a>
+    </nav>
+
   </div>
+
   <div class="container fbar">
-    <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p>
+      © 2026 Student Tools. All rights reserved.
+    </p>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="../js/icons.js"></script>
 <script src="../js/theme.js"></script>
 <script src="../js/main.js"></script>
+
 </body>
 </html>

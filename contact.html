@@ -3,56 +3,266 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Student Tools - Feedback &amp; Suggestions</title>
-<meta name="description" content="Contact Student Tools to suggest a new calculator, report a mistake in a result or share feedback about the website.">
+
+<title>Contact Student Tools - Feedback, Errors &amp; Suggestions</title>
+
+<meta name="description" content="Contact Student Tools to report a calculator issue, suggest a new student tool or share feedback about the website and its calculators.">
+
 <link rel="canonical" href="https://saeedullahkhanai.github.io/student-tools/contact.html">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Student Tools">
-<meta property="og:title" content="Contact Student Tools - Feedback &amp; Suggestions">
-<meta property="og:description" content="Contact Student Tools to suggest a new calculator, report a mistake in a result or share feedback about the website.">
+<meta property="og:title" content="Contact Student Tools - Feedback, Errors &amp; Suggestions">
+<meta property="og:description" content="Contact Student Tools to report a calculator issue, suggest a new student tool or share feedback about the website and its calculators.">
 <meta property="og:url" content="https://saeedullahkhanai.github.io/student-tools/contact.html">
+
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
 <script>
-  (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t;})();
+  (function(){
+    var t = localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+  })();
 </script>
-<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/tools.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saeedullahkhanai.github.io/student-tools/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://saeedullahkhanai.github.io/student-tools/contact.html"}]}</script>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tools.css">
+
+<!-- Contact Page Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Student Tools",
+  "url": "https://saeedullahkhanai.github.io/student-tools/contact.html",
+  "description": "Contact Student Tools for feedback, calculator issues and suggestions for new student tools.",
+  "isAccessibleForFree": true,
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://saeedullahkhanai.github.io/student-tools/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://saeedullahkhanai.github.io/student-tools/contact.html"
+    }
+  ]
+}
+</script>
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
+
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-    <nav id="menu" class="menu" aria-label="Main"><a href="index.html" data-nav="home">Home</a><a href="tools/index.html" data-nav="tools">All Tools</a><a href="guides/index.html" data-nav="guides">Guides</a><a href="about.html" data-nav="about">About</a><a href="contact.html" data-nav="contact" aria-current="page">Contact</a></nav>
+
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">
+        <i data-icon="graduation-cap"></i>
+      </span>
+      Student Tools
+    </a>
+
+    <nav id="menu" class="menu" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="tools/index.html" data-nav="tools">All Tools</a>
+      <a href="guides/index.html" data-nav="guides">Guides</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="contact.html" data-nav="contact" aria-current="page">Contact</a>
+    </nav>
+
     <div class="actions">
-      <button class="theme-toggle" id="themeBtn" role="switch" aria-checked="false" aria-label="Dark mode"><span class="thumb" aria-hidden="true"></span><i data-icon="sun"></i><i data-icon="moon"></i></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i data-icon="menu"></i></button>
+
+      <button
+        class="theme-toggle"
+        id="themeBtn"
+        role="switch"
+        aria-checked="false"
+        aria-label="Dark mode">
+        <span class="thumb" aria-hidden="true"></span>
+        <i data-icon="sun"></i>
+        <i data-icon="moon"></i>
+      </button>
+
+      <button
+        class="icon-btn menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="menu">
+        <i data-icon="menu"></i>
+      </button>
+
     </div>
   </div>
 </header>
-<main id="main" class="container"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Contact</li></ol></nav><article class="content"><h1>Contact</h1><p>Have a suggestion, found a mistake or want a new tool? We would like to hear from you.</p><p>Email: <strong>contact@example.com</strong> (replace with your real address).</p><p>There is no contact form yet because this site has no backend.</p><p><em>Placeholder content: review and customise before publishing.</em></p></article></main>
+
+<main id="main" class="container">
+
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li aria-current="page">Contact</li>
+    </ol>
+  </nav>
+
+  <article class="content">
+
+    <h1>Contact Student Tools</h1>
+
+    <p>
+      Have a suggestion, found a calculator issue or want to request a new
+      student tool? We welcome useful feedback that can help improve the
+      website.
+    </p>
+
+    <h2>Report a Calculator or Website Issue</h2>
+
+    <p>
+      If you notice an incorrect result, broken link, display problem or
+      another issue, please provide as much useful information as possible.
+      Include the name of the tool and, if relevant, the values you entered
+      so the issue can be checked more easily.
+    </p>
+
+    <h2>Suggest a New Tool</h2>
+
+    <p>
+      You can also suggest a calculator or study utility that would be
+      useful for students. Examples include academic calculators,
+      productivity tools and other simple utilities.
+    </p>
+
+    <h2>Contact Method</h2>
+
+    <p>
+      This website is currently a static GitHub Pages site and does not use
+      a built-in contact form or backend messaging system.
+    </p>
+
+    <p>
+      A public contact email can be added here when a dedicated email
+      address for Student Tools is available.
+    </p>
+
+    <h2>Before Sending Feedback</h2>
+
+    <ul>
+      <li>Include the name of the tool you are referring to.</li>
+      <li>Explain the issue or suggestion clearly.</li>
+      <li>For calculation issues, include an example input and expected result.</li>
+      <li>Do not send passwords, financial information or other sensitive information.</li>
+    </ul>
+
+    <h2>Explore the Website</h2>
+
+    <p>
+      You can also browse the
+      <a href="tools/index.html">All Student Tools</a>
+      or read the available
+      <a href="guides/index.html">student guides</a>.
+    </p>
+
+    <p>
+      For information about the website and its purpose, visit
+      <a href="about.html">About Student Tools</a>.
+    </p>
+
+  </article>
+
+</main>
+
 <footer class="footer">
+
   <div class="container fgrid">
+
     <div class="fbrand">
-      <a class="brand" href="index.html"><span class="logo" aria-hidden="true"><i data-icon="graduation-cap"></i></span> Student Tools</a>
-      <p>Simple tools for smarter studying. Free calculators and utilities for students and teachers.</p>
+
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true">
+          <i data-icon="graduation-cap"></i>
+        </span>
+        Student Tools
+      </a>
+
+      <p>
+        Simple tools for smarter studying. Free calculators and utilities
+        for students and teachers.
+      </p>
+
       <div class="social">
-        <a href="contact.html" aria-label="Email us"><i data-icon="mail"></i></a>
-        <!-- Add real social profile links here once the accounts exist. -->
+        <a href="contact.html" aria-label="Contact Student Tools">
+          <i data-icon="mail"></i>
+        </a>
       </div>
+
     </div>
-    <nav aria-label="Popular tools"><p class="ft">Popular tools</p><a href="tools/attendance.html">Attendance Calculator</a><a href="tools/semester-gpa.html">Semester GPA Calculator</a><a href="tools/cgpa.html">CGPA Calculator</a><a href="tools/scientific.html">Scientific Calculator</a><a href="tools/percentage.html">Percentage Calculator</a></nav>
-    <nav aria-label="Resources"><p class="ft">Resources</p><a href="tools/index.html">All Tools</a><a href="guides/index.html">Guides</a><a href="index.html#faqH">FAQ</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-    <nav aria-label="Legal"><p class="ft">Legal</p><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="disclaimer.html">Disclaimer</a></nav>
+
+    <nav aria-label="Popular tools">
+      <p class="ft">Popular tools</p>
+      <a href="tools/attendance.html">Attendance Calculator</a>
+      <a href="tools/semester-gpa.html">Semester GPA Calculator</a>
+      <a href="tools/cgpa.html">CGPA Calculator</a>
+      <a href="tools/scientific.html">Scientific Calculator</a>
+      <a href="tools/percentage.html">Percentage Calculator</a>
+    </nav>
+
+    <nav aria-label="Resources">
+      <p class="ft">Resources</p>
+      <a href="tools/index.html">All Tools</a>
+      <a href="guides/index.html">Guides</a>
+      <a href="index.html#faqH">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="ft">Legal</p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+
   </div>
+
   <div class="container fbar">
+
     <p>© 2026 Student Tools. All rights reserved.</p>
-    <p class="pn"><i data-icon="shield-check"></i> Your calculations stay in your browser.</p>
-    <a class="totop" href="#main">Back to top <i data-icon="arrow-up"></i></a>
+
+    <p class="pn">
+      <i data-icon="shield-check"></i>
+      Your calculations stay in your browser.
+    </p>
+
+    <a class="totop" href="#main">
+      Back to top
+      <i data-icon="arrow-up"></i>
+    </a>
+
   </div>
+
 </footer>
+
 <script src="js/icons.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
